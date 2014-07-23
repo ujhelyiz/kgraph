@@ -2,7 +2,6 @@
  */
 package org.eclipse.gef4.kgraph;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface PropertyMapping extends EObject {
+public interface PropertyMapping {
     /**
      * Returns the value of the '<em><b>Key</b></em>' attribute.
      * <!-- begin-user-doc -->

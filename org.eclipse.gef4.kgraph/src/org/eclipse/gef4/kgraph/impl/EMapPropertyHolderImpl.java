@@ -85,11 +85,11 @@ public abstract class EMapPropertyHolderImpl extends MinimalEObjectImpl.Containe
      * <!-- end-user-doc -->
      * @generated
      */
-    public EMap<IProperty<?>, Object> getTransientProperties() {
+    public Map<IProperty<?>, Object> getTransientProperties() {
         if (transientProperties == null) {
             transientProperties = new EcoreEMap<IProperty<?>,Object>(KGraphPackage.Literals.IPROPERTY_TO_OBJECT_MAP, IPropertyToObjectMapImpl.class, this, KGraphPackage.EMAP_PROPERTY_HOLDER__TRANSIENT_PROPERTIES);
         }
-        return transientProperties;
+        return transientProperties.map();
     }
 
     /**
@@ -97,7 +97,7 @@ public abstract class EMapPropertyHolderImpl extends MinimalEObjectImpl.Containe
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<PropertyMapping> getPersistentProperties() {
+    public List<PropertyMapping> getPersistentProperties() {
         if (persistentProperties == null) {
             persistentProperties = new EObjectContainmentEList<PropertyMapping>(PropertyMapping.class, this, KGraphPackage.EMAP_PROPERTY_HOLDER__PERSISTENT_PROPERTIES);
         }
@@ -230,7 +230,7 @@ public abstract class EMapPropertyHolderImpl extends MinimalEObjectImpl.Containe
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
             case KGraphPackage.EMAP_PROPERTY_HOLDER__TRANSIENT_PROPERTIES:
-                return ((InternalEList<?>)getTransientProperties()).basicRemove(otherEnd, msgs);
+                return ((InternalEList<?>)((EMap.InternalMapView<IProperty<?>, Object>)getTransientProperties()).eMap()).basicRemove(otherEnd, msgs);
             case KGraphPackage.EMAP_PROPERTY_HOLDER__PERSISTENT_PROPERTIES:
                 return ((InternalEList<?>)getPersistentProperties()).basicRemove(otherEnd, msgs);
         }
@@ -246,8 +246,8 @@ public abstract class EMapPropertyHolderImpl extends MinimalEObjectImpl.Containe
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case KGraphPackage.EMAP_PROPERTY_HOLDER__TRANSIENT_PROPERTIES:
-                if (coreType) return getTransientProperties();
-                else return getTransientProperties().map();
+                if (coreType) return ((EMap.InternalMapView<IProperty<?>, Object>)getTransientProperties()).eMap();
+                else return getTransientProperties();
             case KGraphPackage.EMAP_PROPERTY_HOLDER__PERSISTENT_PROPERTIES:
                 return getPersistentProperties();
         }
@@ -264,7 +264,7 @@ public abstract class EMapPropertyHolderImpl extends MinimalEObjectImpl.Containe
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
             case KGraphPackage.EMAP_PROPERTY_HOLDER__TRANSIENT_PROPERTIES:
-                ((EStructuralFeature.Setting)getTransientProperties()).set(newValue);
+                ((EStructuralFeature.Setting)((EMap.InternalMapView<IProperty<?>, Object>)getTransientProperties()).eMap()).set(newValue);
                 return;
             case KGraphPackage.EMAP_PROPERTY_HOLDER__PERSISTENT_PROPERTIES:
                 getPersistentProperties().clear();

@@ -2,7 +2,7 @@
  */
 package org.eclipse.gef4.kgraph;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,6 +40,6 @@ public interface KLabeledGraphElement extends KGraphElement {
      * @model opposite="container" containment="true"
      * @generated
      */
-    EList<KLabel> getLabels();
+    List<KLabel> getLabels();
 
 } // KLabeledGraphElement

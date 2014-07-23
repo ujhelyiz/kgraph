@@ -4,6 +4,7 @@ package org.eclipse.gef4.kgraph.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
+import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -85,7 +86,7 @@ public abstract class KGraphElementImpl extends EMapPropertyHolderImpl implement
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<EObject> getData() {
+    public List<EObject> getData() {
         if (data == null) {
             data = new EObjectContainmentEList<EObject>(EObject.class, this, KGraphPackage.KGRAPH_ELEMENT__DATA);
         }
@@ -118,7 +119,7 @@ public abstract class KGraphElementImpl extends EMapPropertyHolderImpl implement
      * <!-- end-user-doc -->
      * @generated
      */
-    public EObject getData(EClass type) {
+    public Object getData(EClass type) {
         // TODO: implement this method
         // Ensure that you remove @generated or mark it @generated NOT
         throw new UnsupportedOperationException();

@@ -3,10 +3,12 @@
 package org.eclipse.gef4.kgraph.impl;
 
 import java.util.Collection;
+import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
@@ -268,7 +270,7 @@ public class KPortImpl extends KLabeledGraphElementImpl implements KPort {
      */
     public void setContainer(KNode newContainer) {
         if (newContainer != eInternalContainer() || (eContainerFeatureID() != KGraphPackage.KPORT__CONTAINER && newContainer != null)) {
-            if (EcoreUtil.isAncestor(this, newContainer))
+            if (EcoreUtil.isAncestor(this, (EObject)newContainer))
                 throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
             NotificationChain msgs = null;
             if (eInternalContainer() != null)
@@ -287,7 +289,7 @@ public class KPortImpl extends KLabeledGraphElementImpl implements KPort {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<KEdge> getOutgoingEdges() {
+    public List<KEdge> getOutgoingEdges() {
         if (outgoingEdges == null) {
             outgoingEdges = new EObjectWithInverseResolvingEList<KEdge>(KEdge.class, this, KGraphPackage.KPORT__OUTGOING_EDGES, KGraphPackage.KEDGE__SOURCE_PORT);
         }
@@ -299,7 +301,7 @@ public class KPortImpl extends KLabeledGraphElementImpl implements KPort {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<KEdge> getIncomingEdges() {
+    public List<KEdge> getIncomingEdges() {
         if (incomingEdges == null) {
             incomingEdges = new EObjectWithInverseResolvingEList<KEdge>(KEdge.class, this, KGraphPackage.KPORT__INCOMING_EDGES, KGraphPackage.KEDGE__TARGET_PORT);
         }

@@ -2,7 +2,6 @@
  */
 package org.eclipse.gef4.kgraph;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface KPoint extends EObject {
+public interface KPoint {
     /**
      * Returns the value of the '<em><b>Xpos</b></em>' attribute.
      * <!-- begin-user-doc -->

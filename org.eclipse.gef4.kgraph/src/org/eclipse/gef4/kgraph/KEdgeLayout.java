@@ -2,9 +2,7 @@
  */
 package org.eclipse.gef4.kgraph;
 
-import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,7 +34,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model interface="true" abstract="true"
  * @generated
  */
-public interface KEdgeLayout extends EObject {
+public interface KEdgeLayout {
     /**
      * Returns the value of the '<em><b>Source Point</b></em>' containment reference.
      * <!-- begin-user-doc -->
@@ -105,6 +103,6 @@ public interface KEdgeLayout extends EObject {
      * @model containment="true"
      * @generated
      */
-    EList<KPoint> getBendPoints();
+    List<KPoint> getBendPoints();
 
 } // KEdgeLayout

@@ -2,8 +2,7 @@
  */
 package org.eclipse.gef4.kgraph;
 
-import org.eclipse.emf.common.util.EList;
-
+import java.util.List;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 
@@ -44,7 +43,7 @@ public interface KGraphElement extends EMapPropertyHolder {
      * @model containment="true"
      * @generated
      */
-    EList<EObject> getData();
+    List<EObject> getData();
 
     /**
      * Returns the value of the '<em><b>Id</b></em>' attribute.
@@ -83,7 +82,7 @@ public interface KGraphElement extends EMapPropertyHolder {
      * @model
      * @generated
      */
-    EObject getData(EClass type);
+    Object getData(EClass type);
 
     /**
      * <!-- begin-user-doc -->

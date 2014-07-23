@@ -2,7 +2,7 @@
  */
 package org.eclipse.gef4.kgraph;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -48,7 +48,7 @@ public interface KNode extends KLabeledGraphElement, KShapeLayout {
      * @model opposite="parent" containment="true"
      * @generated
      */
-    EList<KNode> getChildren();
+    List<KNode> getChildren();
 
     /**
      * Returns the value of the '<em><b>Parent</b></em>' container reference.
@@ -94,7 +94,7 @@ public interface KNode extends KLabeledGraphElement, KShapeLayout {
      * @model opposite="container" containment="true"
      * @generated
      */
-    EList<KPort> getPorts();
+    List<KPort> getPorts();
 
     /**
      * Returns the value of the '<em><b>Outgoing Edges</b></em>' containment reference list.
@@ -112,7 +112,7 @@ public interface KNode extends KLabeledGraphElement, KShapeLayout {
      * @model opposite="sourceNode" containment="true"
      * @generated
      */
-    EList<KEdge> getOutgoingEdges();
+    List<KEdge> getOutgoingEdges();
 
     /**
      * Returns the value of the '<em><b>Incoming Edges</b></em>' reference list.
@@ -130,6 +130,6 @@ public interface KNode extends KLabeledGraphElement, KShapeLayout {
      * @model opposite="targetNode"
      * @generated
      */
-    EList<KEdge> getIncomingEdges();
+    List<KEdge> getIncomingEdges();
 
 } // KNode

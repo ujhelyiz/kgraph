@@ -3,10 +3,12 @@
 package org.eclipse.gef4.kgraph.impl;
 
 import java.util.Collection;
+import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -209,7 +211,7 @@ public class KEdgeImpl extends KLabeledGraphElementImpl implements KEdge {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<KPoint> getBendPoints() {
+    public List<KPoint> getBendPoints() {
         if (bendPoints == null) {
             bendPoints = new EObjectContainmentEList<KPoint>(KPoint.class, this, KGraphPackage.KEDGE__BEND_POINTS);
         }
@@ -243,7 +245,7 @@ public class KEdgeImpl extends KLabeledGraphElementImpl implements KEdge {
      */
     public void setSourceNode(KNode newSourceNode) {
         if (newSourceNode != eInternalContainer() || (eContainerFeatureID() != KGraphPackage.KEDGE__SOURCE_NODE && newSourceNode != null)) {
-            if (EcoreUtil.isAncestor(this, newSourceNode))
+            if (EcoreUtil.isAncestor(this, (EObject)newSourceNode))
                 throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
             NotificationChain msgs = null;
             if (eInternalContainer() != null)
@@ -263,7 +265,7 @@ public class KEdgeImpl extends KLabeledGraphElementImpl implements KEdge {
      * @generated
      */
     public KNode getTargetNode() {
-        if (targetNode != null && targetNode.eIsProxy()) {
+        if (targetNode != null && ((EObject)targetNode).eIsProxy()) {
             InternalEObject oldTargetNode = (InternalEObject)targetNode;
             targetNode = (KNode)eResolveProxy(oldTargetNode);
             if (targetNode != oldTargetNode) {
@@ -323,7 +325,7 @@ public class KEdgeImpl extends KLabeledGraphElementImpl implements KEdge {
      * @generated
      */
     public KPort getSourcePort() {
-        if (sourcePort != null && sourcePort.eIsProxy()) {
+        if (sourcePort != null && ((EObject)sourcePort).eIsProxy()) {
             InternalEObject oldSourcePort = (InternalEObject)sourcePort;
             sourcePort = (KPort)eResolveProxy(oldSourcePort);
             if (sourcePort != oldSourcePort) {
@@ -383,7 +385,7 @@ public class KEdgeImpl extends KLabeledGraphElementImpl implements KEdge {
      * @generated
      */
     public KPort getTargetPort() {
-        if (targetPort != null && targetPort.eIsProxy()) {
+        if (targetPort != null && ((EObject)targetPort).eIsProxy()) {
             InternalEObject oldTargetPort = (InternalEObject)targetPort;
             targetPort = (KPort)eResolveProxy(oldTargetPort);
             if (targetPort != oldTargetPort) {

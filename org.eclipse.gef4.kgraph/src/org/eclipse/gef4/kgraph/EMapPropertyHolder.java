@@ -2,11 +2,8 @@
  */
 package org.eclipse.gef4.kgraph;
 
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.EMap;
-
-import org.eclipse.emf.ecore.EObject;
-
+import java.util.List;
+import java.util.Map;
 import org.eclipse.gef4.kgraph.properties.IProperty;
 import org.eclipse.gef4.kgraph.properties.IPropertyHolder;
 
@@ -31,7 +28,7 @@ import org.eclipse.gef4.kgraph.properties.IPropertyHolder;
  * @model abstract="true" superTypes="org.eclipse.gef4.kgraph.IPropertyHolder"
  * @generated
  */
-public interface EMapPropertyHolder extends EObject, IPropertyHolder {
+public interface EMapPropertyHolder extends IPropertyHolder {
     /**
      * Returns the value of the '<em><b>Transient Properties</b></em>' map.
      * The key is of type {@link org.eclipse.gef4.kgraph.properties.IProperty<?>},
@@ -47,7 +44,7 @@ public interface EMapPropertyHolder extends EObject, IPropertyHolder {
      * @model mapType="org.eclipse.gef4.kgraph.IPropertyToObjectMap<org.eclipse.gef4.kgraph.IProperty<?>, org.eclipse.emf.ecore.EJavaObject>" transient="true"
      * @generated
      */
-    EMap<IProperty<?>, Object> getTransientProperties();
+    Map<IProperty<?>, Object> getTransientProperties();
 
     /**
      * Returns the value of the '<em><b>Persistent Properties</b></em>' containment reference list.
@@ -63,7 +60,7 @@ public interface EMapPropertyHolder extends EObject, IPropertyHolder {
      * @model containment="true"
      * @generated
      */
-    EList<PropertyMapping> getPersistentProperties();
+    List<PropertyMapping> getPersistentProperties();
 
     /**
      * <!-- begin-user-doc -->

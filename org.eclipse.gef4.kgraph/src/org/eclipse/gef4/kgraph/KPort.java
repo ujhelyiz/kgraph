@@ -2,7 +2,7 @@
  */
 package org.eclipse.gef4.kgraph;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -75,7 +75,7 @@ public interface KPort extends KLabeledGraphElement, KShapeLayout {
      * @model opposite="sourcePort"
      * @generated
      */
-    EList<KEdge> getOutgoingEdges();
+    List<KEdge> getOutgoingEdges();
 
     /**
      * Returns the value of the '<em><b>Incoming Edges</b></em>' reference list.
@@ -93,6 +93,6 @@ public interface KPort extends KLabeledGraphElement, KShapeLayout {
      * @model opposite="targetPort"
      * @generated
      */
-    EList<KEdge> getIncomingEdges();
+    List<KEdge> getIncomingEdges();
 
 } // KPort

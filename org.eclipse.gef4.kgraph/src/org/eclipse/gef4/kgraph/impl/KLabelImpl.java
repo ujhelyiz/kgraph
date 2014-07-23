@@ -5,6 +5,7 @@ package org.eclipse.gef4.kgraph.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
@@ -283,7 +284,7 @@ public class KLabelImpl extends KGraphElementImpl implements KLabel {
      */
     public void setContainer(KLabeledGraphElement newContainer) {
         if (newContainer != eInternalContainer() || (eContainerFeatureID() != KGraphPackage.KLABEL__CONTAINER && newContainer != null)) {
-            if (EcoreUtil.isAncestor(this, newContainer))
+            if (EcoreUtil.isAncestor(this, (EObject)newContainer))
                 throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
             NotificationChain msgs = null;
             if (eInternalContainer() != null)

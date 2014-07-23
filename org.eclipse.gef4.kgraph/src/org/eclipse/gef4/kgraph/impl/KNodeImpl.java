@@ -3,10 +3,12 @@
 package org.eclipse.gef4.kgraph.impl;
 
 import java.util.Collection;
+import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
@@ -269,7 +271,7 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<KNode> getChildren() {
+    public List<KNode> getChildren() {
         if (children == null) {
             children = new EObjectContainmentWithInverseEList<KNode>(KNode.class, this, KGraphPackage.KNODE__CHILDREN, KGraphPackage.KNODE__PARENT);
         }
@@ -303,7 +305,7 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
      */
     public void setParent(KNode newParent) {
         if (newParent != eInternalContainer() || (eContainerFeatureID() != KGraphPackage.KNODE__PARENT && newParent != null)) {
-            if (EcoreUtil.isAncestor(this, newParent))
+            if (EcoreUtil.isAncestor(this, (EObject)newParent))
                 throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
             NotificationChain msgs = null;
             if (eInternalContainer() != null)
@@ -322,7 +324,7 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<KPort> getPorts() {
+    public List<KPort> getPorts() {
         if (ports == null) {
             ports = new EObjectContainmentWithInverseEList<KPort>(KPort.class, this, KGraphPackage.KNODE__PORTS, KGraphPackage.KPORT__CONTAINER);
         }
@@ -334,7 +336,7 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<KEdge> getOutgoingEdges() {
+    public List<KEdge> getOutgoingEdges() {
         if (outgoingEdges == null) {
             outgoingEdges = new EObjectContainmentWithInverseEList<KEdge>(KEdge.class, this, KGraphPackage.KNODE__OUTGOING_EDGES, KGraphPackage.KEDGE__SOURCE_NODE);
         }
@@ -346,7 +348,7 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<KEdge> getIncomingEdges() {
+    public List<KEdge> getIncomingEdges() {
         if (incomingEdges == null) {
             incomingEdges = new EObjectWithInverseResolvingEList<KEdge>(KEdge.class, this, KGraphPackage.KNODE__INCOMING_EDGES, KGraphPackage.KEDGE__TARGET_NODE);
         }

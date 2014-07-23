@@ -3,6 +3,7 @@
 package org.eclipse.gef4.kgraph.impl;
 
 import java.util.Collection;
+import java.util.List;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -61,7 +62,7 @@ public abstract class KLabeledGraphElementImpl extends KGraphElementImpl impleme
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<KLabel> getLabels() {
+    public List<KLabel> getLabels() {
         if (labels == null) {
             labels = new EObjectContainmentWithInverseEList<KLabel>(KLabel.class, this, KGraphPackage.KLABELED_GRAPH_ELEMENT__LABELS, KGraphPackage.KLABEL__CONTAINER);
         }

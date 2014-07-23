@@ -61,14 +61,14 @@ public class KGraphFactoryImpl extends EFactoryImpl implements KGraphFactory {
     @Override
     public EObject create(EClass eClass) {
         switch (eClass.getClassifierID()) {
-            case KGraphPackage.KGRAPH_DATA: return createKGraphData();
-            case KGraphPackage.KNODE: return createKNode();
-            case KGraphPackage.KEDGE: return createKEdge();
-            case KGraphPackage.KPORT: return createKPort();
-            case KGraphPackage.KLABEL: return createKLabel();
-            case KGraphPackage.KPOINT: return createKPoint();
+            case KGraphPackage.KGRAPH_DATA: return (EObject)createKGraphData();
+            case KGraphPackage.KNODE: return (EObject)createKNode();
+            case KGraphPackage.KEDGE: return (EObject)createKEdge();
+            case KGraphPackage.KPORT: return (EObject)createKPort();
+            case KGraphPackage.KLABEL: return (EObject)createKLabel();
+            case KGraphPackage.KPOINT: return (EObject)createKPoint();
             case KGraphPackage.IPROPERTY_TO_OBJECT_MAP: return (EObject)createIPropertyToObjectMap();
-            case KGraphPackage.PROPERTY_MAPPING: return createPropertyMapping();
+            case KGraphPackage.PROPERTY_MAPPING: return (EObject)createPropertyMapping();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
