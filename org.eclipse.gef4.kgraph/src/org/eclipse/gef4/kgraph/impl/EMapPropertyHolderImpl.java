@@ -109,23 +109,24 @@ public abstract class EMapPropertyHolderImpl extends MinimalEObjectImpl.Containe
      * <!-- end-user-doc -->
      * @generated NOT
      */
+    @SuppressWarnings("unchecked")
     public void makePersistent() {
         boolean deliver = this.eDeliver();
         this.eSetDeliver(false);
         
         int i = 0;
         List<PropertyMapping> persisEntries = getPersistentProperties();
-        for (Entry<IProperty<?>, Object> entry : getTransientProperties()) {
+        for (Entry<IProperty<?>, Object> entry : (EMap<IProperty<?>, Object>)getTransientProperties()) {
             IProperty<?> key = entry.getKey();
             Object value = entry.getValue();
             if (key != null && value != null) {
-                PropertyMapping propMapping;
+                PropertyMappingImpl propMapping;
                 if (i >= persisEntries.size()) {
-                    propMapping = KGraphFactory.eINSTANCE.createPropertyMapping();
+                    propMapping = (PropertyMappingImpl) KGraphFactory.eINSTANCE.createPropertyMapping();
                     persisEntries.add(propMapping);
                     i++;
                 } else {
-                    propMapping = persisEntries.get(i++);
+                    propMapping = (PropertyMappingImpl) persisEntries.get(i++);
                 }
                 
                 boolean pEdeliver = propMapping.eDeliver();
@@ -144,11 +145,12 @@ public abstract class EMapPropertyHolderImpl extends MinimalEObjectImpl.Containe
      * <!-- end-user-doc -->
      * @generated NOT
      */
+    @SuppressWarnings("unchecked")
     public <T> void setProperty(IProperty<? super T> property, T value) {
         if (value == null) {
-            getTransientProperties().removeKey(property);
+            ((EMap<IProperty<?>, Object>)getTransientProperties()).removeKey(property);
         } else {
-            getTransientProperties().put(property, value);
+            ((EMap<IProperty<?>, Object>)getTransientProperties()).put(property, value);
         }
     }
 
@@ -183,11 +185,12 @@ public abstract class EMapPropertyHolderImpl extends MinimalEObjectImpl.Containe
      * <!-- end-user-doc -->
      * @generated NOT
      */
+    @SuppressWarnings("unchecked")
     public void copyProperties(IPropertyHolder holder) {
         if (holder instanceof EMapPropertyHolder) {
             EMapPropertyHolder other = (EMapPropertyHolder) holder;
-            EMap<IProperty<?>, Object> ourProps = this.getTransientProperties();
-            for (Map.Entry<IProperty<?>, Object> entry : other.getTransientProperties()) {
+            EMap<IProperty<?>, Object> ourProps = (EMap<IProperty<?>, Object>) this.getTransientProperties();
+            for (Map.Entry<IProperty<?>, Object> entry : (EMap<IProperty<?>, Object>) other.getTransientProperties()) {
                 Object value = entry.getValue();
                 if (value instanceof IPropertyValueProxy) {
                     IPropertyValueProxy proxy = (IPropertyValueProxy) value;
@@ -210,7 +213,8 @@ public abstract class EMapPropertyHolderImpl extends MinimalEObjectImpl.Containe
      * @generated NOT
      */
     public Map<IProperty<?>, Object> getAllProperties() {
-        EMap<IProperty<?>, Object> props = getTransientProperties();
+        @SuppressWarnings("unchecked")
+        EMap<IProperty<?>, Object> props = (EMap<IProperty<?>, Object>) getTransientProperties();
         // check for unresolved properties
         for (Map.Entry<IProperty<?>, Object> entry : props) {
             if (entry.getValue() instanceof IPropertyValueProxy) {
