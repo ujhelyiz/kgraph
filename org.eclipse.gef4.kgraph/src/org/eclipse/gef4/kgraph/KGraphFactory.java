@@ -67,15 +67,6 @@ public interface KGraphFactory extends EFactory {
     KLabel createKLabel();
 
     /**
-	 * Returns a new object of class '<em>KPoint</em>'.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @return a new object of class '<em>KPoint</em>'.
-	 * @generated
-	 */
-    KPoint createKPoint();
-
-    /**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

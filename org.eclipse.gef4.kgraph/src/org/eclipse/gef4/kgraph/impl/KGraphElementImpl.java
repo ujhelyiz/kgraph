@@ -253,7 +253,7 @@ public abstract class KGraphElementImpl extends MinimalEObjectImpl.Container imp
     @SuppressWarnings({"rawtypes", "unchecked" })
     public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case KGraphPackage.KGRAPH_ELEMENT___GET_DATA__ECLASS:
+			case KGraphPackage.KGRAPH_ELEMENT___GET_DATA__CLASS:
 				return getData((Class)arguments.get(0));
 			case KGraphPackage.KGRAPH_ELEMENT___SET_PROPERTY__IPROPERTY_OBJECT:
 				setProperty((IProperty)arguments.get(0), arguments.get(1));

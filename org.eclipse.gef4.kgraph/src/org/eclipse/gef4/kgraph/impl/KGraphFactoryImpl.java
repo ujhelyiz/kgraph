@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
+import org.eclipse.gef4.geometry.planar.Point;
 import org.eclipse.gef4.kgraph.*;
 
 import org.eclipse.gef4.kgraph.properties.IProperty;
@@ -64,7 +65,6 @@ public class KGraphFactoryImpl extends EFactoryImpl implements KGraphFactory {
 			case KGraphPackage.KEDGE: return (EObject)createKEdge();
 			case KGraphPackage.KPORT: return (EObject)createKPort();
 			case KGraphPackage.KLABEL: return (EObject)createKLabel();
-			case KGraphPackage.KPOINT: return (EObject)createKPoint();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -80,6 +80,8 @@ public class KGraphFactoryImpl extends EFactoryImpl implements KGraphFactory {
 		switch (eDataType.getClassifierID()) {
 			case KGraphPackage.IPROPERTY:
 				return createIPropertyFromString(eDataType, initialValue);
+			case KGraphPackage.POINT:
+				return createPointFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -95,6 +97,8 @@ public class KGraphFactoryImpl extends EFactoryImpl implements KGraphFactory {
 		switch (eDataType.getClassifierID()) {
 			case KGraphPackage.IPROPERTY:
 				return convertIPropertyToString(eDataType, instanceValue);
+			case KGraphPackage.POINT:
+				return convertPointToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -155,16 +159,6 @@ public class KGraphFactoryImpl extends EFactoryImpl implements KGraphFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public KPoint createKPoint() {
-		KPointImpl kPoint = new KPointImpl();
-		return kPoint;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public IProperty<?> createIPropertyFromString(EDataType eDataType, String initialValue) {
 		return (IProperty<?>)super.createFromString(initialValue);
 	}
@@ -176,6 +170,24 @@ public class KGraphFactoryImpl extends EFactoryImpl implements KGraphFactory {
 	 */
 	public String convertIPropertyToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Point createPointFromString(EDataType eDataType, String initialValue) {
+		return (Point)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertPointToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**

@@ -23,7 +23,7 @@ package org.eclipse.gef4.kgraph;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gef4.kgraph.KShapeLayout#getXpos <em>Xpos</em>}</li>
+ *   <li>{@link org.eclipse.gef4.kgraph.KShapeLayout#getPosition <em>Position</em>}</li>
  *   <li>{@link org.eclipse.gef4.kgraph.KShapeLayout#getYpos <em>Ypos</em>}</li>
  *   <li>{@link org.eclipse.gef4.kgraph.KShapeLayout#getWidth <em>Width</em>}</li>
  *   <li>{@link org.eclipse.gef4.kgraph.KShapeLayout#getHeight <em>Height</em>}</li>
@@ -36,32 +36,32 @@ package org.eclipse.gef4.kgraph;
  */
 public interface KShapeLayout {
     /**
-	 * Returns the value of the '<em><b>Xpos</b></em>' attribute.
+	 * Returns the value of the '<em><b>Position</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Xpos</em>' attribute isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-	 * @return the value of the '<em>Xpos</em>' attribute.
-	 * @see #setXpos(double)
-	 * @see org.eclipse.gef4.kgraph.KGraphPackage#getKShapeLayout_Xpos()
+	 * <p>
+	 * If the meaning of the '<em>Position</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Position</em>' attribute.
+	 * @see #setPosition(double)
+	 * @see org.eclipse.gef4.kgraph.KGraphPackage#getKShapeLayout_Position()
 	 * @model
 	 * @generated
 	 */
-    double getXpos();
+	double getPosition();
 
-    /**
-	 * Sets the value of the '{@link org.eclipse.gef4.kgraph.KShapeLayout#getXpos <em>Xpos</em>}' attribute.
+	/**
+	 * Sets the value of the '{@link org.eclipse.gef4.kgraph.KShapeLayout#getPosition <em>Position</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Xpos</em>' attribute.
-	 * @see #getXpos()
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Position</em>' attribute.
+	 * @see #getPosition()
 	 * @generated
 	 */
-    void setXpos(double value);
+	void setPosition(double value);
 
-    /**
+				/**
 	 * Returns the value of the '<em><b>Ypos</b></em>' attribute.
 	 * <!-- begin-user-doc -->
      * <p>

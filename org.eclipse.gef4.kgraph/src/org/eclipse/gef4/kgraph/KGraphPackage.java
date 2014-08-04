@@ -66,7 +66,7 @@ public interface KGraphPackage extends EPackage {
 	 * @see org.eclipse.gef4.kgraph.impl.KGraphPackageImpl#getIPropertyHolder()
 	 * @generated
 	 */
-    int IPROPERTY_HOLDER = 10;
+    int IPROPERTY_HOLDER = 9;
 
     /**
 	 * The number of structural features of the '<em>IProperty Holder</em>' class.
@@ -216,13 +216,13 @@ public interface KGraphPackage extends EPackage {
 				/**
 	 * The operation id for the '<em>Get Data</em>' operation.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KGRAPH_ELEMENT___GET_DATA__ECLASS = IPROPERTY_HOLDER_OPERATION_COUNT + 0;
+	int KGRAPH_ELEMENT___GET_DATA__CLASS = IPROPERTY_HOLDER_OPERATION_COUNT + 0;
 
-    /**
+				/**
 	 * The number of operations of the '<em>Element</em>' class.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -325,13 +325,13 @@ public interface KGraphPackage extends EPackage {
 				/**
 	 * The operation id for the '<em>Get Data</em>' operation.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KLABELED_GRAPH_ELEMENT___GET_DATA__ECLASS = KGRAPH_ELEMENT___GET_DATA__ECLASS;
+	int KLABELED_GRAPH_ELEMENT___GET_DATA__CLASS = KGRAPH_ELEMENT___GET_DATA__CLASS;
 
-    /**
+				/**
 	 * The number of operations of the '<em>KLabeled Graph Element</em>' class.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -451,15 +451,15 @@ public interface KGraphPackage extends EPackage {
     int KNODE__LABELS = KLABELED_GRAPH_ELEMENT__LABELS;
 
     /**
-	 * The feature id for the '<em><b>Xpos</b></em>' attribute.
+	 * The feature id for the '<em><b>Position</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KNODE__XPOS = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 0;
+	int KNODE__POSITION = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 0;
 
-    /**
+				/**
 	 * The feature id for the '<em><b>Ypos</b></em>' attribute.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -588,13 +588,13 @@ public interface KGraphPackage extends EPackage {
 				/**
 	 * The operation id for the '<em>Get Data</em>' operation.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KNODE___GET_DATA__ECLASS = KLABELED_GRAPH_ELEMENT___GET_DATA__ECLASS;
+	int KNODE___GET_DATA__CLASS = KLABELED_GRAPH_ELEMENT___GET_DATA__CLASS;
 
-    /**
+				/**
 	 * The number of operations of the '<em>KNode</em>' class.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -641,33 +641,33 @@ public interface KGraphPackage extends EPackage {
     int KEDGE__LABELS = KLABELED_GRAPH_ELEMENT__LABELS;
 
     /**
-	 * The feature id for the '<em><b>Source Point</b></em>' containment reference.
+	 * The feature id for the '<em><b>Start Point</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KEDGE__SOURCE_POINT = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 0;
+	int KEDGE__START_POINT = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 0;
 
-    /**
-	 * The feature id for the '<em><b>Target Point</b></em>' containment reference.
+				/**
+	 * The feature id for the '<em><b>End Point</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KEDGE__TARGET_POINT = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 1;
+	int KEDGE__END_POINT = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 1;
 
-    /**
-	 * The feature id for the '<em><b>Bend Points</b></em>' containment reference list.
+				/**
+	 * The feature id for the '<em><b>Way Points</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KEDGE__BEND_POINTS = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 2;
+	int KEDGE__WAY_POINTS = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 2;
 
-    /**
+				/**
 	 * The feature id for the '<em><b>Source Node</b></em>' container reference.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -760,13 +760,13 @@ public interface KGraphPackage extends EPackage {
 				/**
 	 * The operation id for the '<em>Get Data</em>' operation.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KEDGE___GET_DATA__ECLASS = KLABELED_GRAPH_ELEMENT___GET_DATA__ECLASS;
+	int KEDGE___GET_DATA__CLASS = KLABELED_GRAPH_ELEMENT___GET_DATA__CLASS;
 
-    /**
+				/**
 	 * The number of operations of the '<em>KEdge</em>' class.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -813,15 +813,15 @@ public interface KGraphPackage extends EPackage {
     int KPORT__LABELS = KLABELED_GRAPH_ELEMENT__LABELS;
 
     /**
-	 * The feature id for the '<em><b>Xpos</b></em>' attribute.
+	 * The feature id for the '<em><b>Position</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KPORT__XPOS = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 0;
+	int KPORT__POSITION = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 0;
 
-    /**
+				/**
 	 * The feature id for the '<em><b>Ypos</b></em>' attribute.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -932,13 +932,13 @@ public interface KGraphPackage extends EPackage {
 				/**
 	 * The operation id for the '<em>Get Data</em>' operation.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KPORT___GET_DATA__ECLASS = KLABELED_GRAPH_ELEMENT___GET_DATA__ECLASS;
+	int KPORT___GET_DATA__CLASS = KLABELED_GRAPH_ELEMENT___GET_DATA__CLASS;
 
-    /**
+				/**
 	 * The number of operations of the '<em>KPort</em>' class.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -976,15 +976,15 @@ public interface KGraphPackage extends EPackage {
     int KLABEL__DATA = KGRAPH_ELEMENT__DATA;
 
     /**
-	 * The feature id for the '<em><b>Xpos</b></em>' attribute.
+	 * The feature id for the '<em><b>Position</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KLABEL__XPOS = KGRAPH_ELEMENT_FEATURE_COUNT + 0;
+	int KLABEL__POSITION = KGRAPH_ELEMENT_FEATURE_COUNT + 0;
 
-    /**
+				/**
 	 * The feature id for the '<em><b>Ypos</b></em>' attribute.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1086,13 +1086,13 @@ public interface KGraphPackage extends EPackage {
 				/**
 	 * The operation id for the '<em>Get Data</em>' operation.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KLABEL___GET_DATA__ECLASS = KGRAPH_ELEMENT___GET_DATA__ECLASS;
+	int KLABEL___GET_DATA__CLASS = KGRAPH_ELEMENT___GET_DATA__CLASS;
 
-    /**
+				/**
 	 * The number of operations of the '<em>KLabel</em>' class.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1112,15 +1112,15 @@ public interface KGraphPackage extends EPackage {
     int KSHAPE_LAYOUT = 7;
 
     /**
-	 * The feature id for the '<em><b>Xpos</b></em>' attribute.
+	 * The feature id for the '<em><b>Position</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KSHAPE_LAYOUT__XPOS = 0;
+	int KSHAPE_LAYOUT__POSITION = 0;
 
-    /**
+				/**
 	 * The feature id for the '<em><b>Ypos</b></em>' attribute.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1176,33 +1176,33 @@ public interface KGraphPackage extends EPackage {
     int KEDGE_LAYOUT = 8;
 
     /**
-	 * The feature id for the '<em><b>Source Point</b></em>' containment reference.
+	 * The feature id for the '<em><b>Start Point</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KEDGE_LAYOUT__SOURCE_POINT = 0;
+	int KEDGE_LAYOUT__START_POINT = 0;
 
-    /**
-	 * The feature id for the '<em><b>Target Point</b></em>' containment reference.
+				/**
+	 * The feature id for the '<em><b>End Point</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KEDGE_LAYOUT__TARGET_POINT = 1;
+	int KEDGE_LAYOUT__END_POINT = 1;
 
-    /**
-	 * The feature id for the '<em><b>Bend Points</b></em>' containment reference list.
+				/**
+	 * The feature id for the '<em><b>Way Points</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KEDGE_LAYOUT__BEND_POINTS = 2;
+	int KEDGE_LAYOUT__WAY_POINTS = 2;
 
-    /**
+				/**
 	 * The number of structural features of the '<em>KEdge Layout</em>' class.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1221,52 +1221,6 @@ public interface KGraphPackage extends EPackage {
     int KEDGE_LAYOUT_OPERATION_COUNT = 0;
 
     /**
-	 * The meta object id for the '{@link org.eclipse.gef4.kgraph.impl.KPointImpl <em>KPoint</em>}' class.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see org.eclipse.gef4.kgraph.impl.KPointImpl
-	 * @see org.eclipse.gef4.kgraph.impl.KGraphPackageImpl#getKPoint()
-	 * @generated
-	 */
-    int KPOINT = 9;
-
-    /**
-	 * The feature id for the '<em><b>Xpos</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-    int KPOINT__XPOS = 0;
-
-    /**
-	 * The feature id for the '<em><b>Ypos</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-    int KPOINT__YPOS = 1;
-
-    /**
-	 * The number of structural features of the '<em>KPoint</em>' class.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-    int KPOINT_FEATURE_COUNT = 2;
-
-    /**
-	 * The number of operations of the '<em>KPoint</em>' class.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-    int KPOINT_OPERATION_COUNT = 0;
-
-    /**
 	 * The meta object id for the '<em>IProperty</em>' data type.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1274,10 +1228,21 @@ public interface KGraphPackage extends EPackage {
 	 * @see org.eclipse.gef4.kgraph.impl.KGraphPackageImpl#getIProperty()
 	 * @generated
 	 */
-    int IPROPERTY = 11;
+    int IPROPERTY = 10;
 
 
     /**
+	 * The meta object id for the '<em>Point</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gef4.geometry.planar.Point
+	 * @see org.eclipse.gef4.kgraph.impl.KGraphPackageImpl#getPoint()
+	 * @generated
+	 */
+	int POINT = 11;
+
+
+				/**
 	 * Returns the meta object for class '{@link org.eclipse.gef4.kgraph.KGraphElement <em>Element</em>}'.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1299,6 +1264,16 @@ public interface KGraphPackage extends EPackage {
     EAttribute getKGraphElement_Data();
 
     /**
+	 * Returns the meta object for the '{@link org.eclipse.gef4.kgraph.KGraphElement#getData(java.lang.Class) <em>Get Data</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Data</em>' operation.
+	 * @see org.eclipse.gef4.kgraph.KGraphElement#getData(java.lang.Class)
+	 * @generated
+	 */
+	EOperation getKGraphElement__GetData__Class();
+
+				/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.gef4.kgraph.KGraphElement#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1308,16 +1283,6 @@ public interface KGraphPackage extends EPackage {
 	 * @generated
 	 */
     EAttribute getKGraphElement_Id();
-
-    /**
-	 * Returns the meta object for the '{@link org.eclipse.gef4.kgraph.KGraphElement#getData(java.lang.Class) <em>Get Data</em>}' operation.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Data</em>' operation.
-	 * @see org.eclipse.gef4.kgraph.KGraphElement#getData(java.lang.Class)
-	 * @generated
-	 */
-    EOperation getKGraphElement__GetData__EClass();
 
     /**
 	 * Returns the meta object for class '{@link org.eclipse.gef4.kgraph.KLabeledGraphElement <em>KLabeled Graph Element</em>}'.
@@ -1555,17 +1520,17 @@ public interface KGraphPackage extends EPackage {
     EClass getKShapeLayout();
 
     /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gef4.kgraph.KShapeLayout#getXpos <em>Xpos</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.gef4.kgraph.KShapeLayout#getPosition <em>Position</em>}'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Xpos</em>'.
-	 * @see org.eclipse.gef4.kgraph.KShapeLayout#getXpos()
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Position</em>'.
+	 * @see org.eclipse.gef4.kgraph.KShapeLayout#getPosition()
 	 * @see #getKShapeLayout()
 	 * @generated
 	 */
-    EAttribute getKShapeLayout_Xpos();
+	EAttribute getKShapeLayout_Position();
 
-    /**
+				/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.gef4.kgraph.KShapeLayout#getYpos <em>Ypos</em>}'.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1609,71 +1574,39 @@ public interface KGraphPackage extends EPackage {
     EClass getKEdgeLayout();
 
     /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gef4.kgraph.KEdgeLayout#getSourcePoint <em>Source Point</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.gef4.kgraph.KEdgeLayout#getStartPoint <em>Start Point</em>}'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Source Point</em>'.
-	 * @see org.eclipse.gef4.kgraph.KEdgeLayout#getSourcePoint()
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Start Point</em>'.
+	 * @see org.eclipse.gef4.kgraph.KEdgeLayout#getStartPoint()
 	 * @see #getKEdgeLayout()
 	 * @generated
 	 */
-    EReference getKEdgeLayout_SourcePoint();
+	EAttribute getKEdgeLayout_StartPoint();
 
-    /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gef4.kgraph.KEdgeLayout#getTargetPoint <em>Target Point</em>}'.
+				/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.gef4.kgraph.KEdgeLayout#getEndPoint <em>End Point</em>}'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Target Point</em>'.
-	 * @see org.eclipse.gef4.kgraph.KEdgeLayout#getTargetPoint()
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>End Point</em>'.
+	 * @see org.eclipse.gef4.kgraph.KEdgeLayout#getEndPoint()
 	 * @see #getKEdgeLayout()
 	 * @generated
 	 */
-    EReference getKEdgeLayout_TargetPoint();
+	EAttribute getKEdgeLayout_EndPoint();
 
-    /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gef4.kgraph.KEdgeLayout#getBendPoints <em>Bend Points</em>}'.
+				/**
+	 * Returns the meta object for the attribute list '{@link org.eclipse.gef4.kgraph.KEdgeLayout#getWayPoints <em>Way Points</em>}'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Bend Points</em>'.
-	 * @see org.eclipse.gef4.kgraph.KEdgeLayout#getBendPoints()
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Way Points</em>'.
+	 * @see org.eclipse.gef4.kgraph.KEdgeLayout#getWayPoints()
 	 * @see #getKEdgeLayout()
 	 * @generated
 	 */
-    EReference getKEdgeLayout_BendPoints();
+	EAttribute getKEdgeLayout_WayPoints();
 
-    /**
-	 * Returns the meta object for class '{@link org.eclipse.gef4.kgraph.KPoint <em>KPoint</em>}'.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>KPoint</em>'.
-	 * @see org.eclipse.gef4.kgraph.KPoint
-	 * @generated
-	 */
-    EClass getKPoint();
-
-    /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gef4.kgraph.KPoint#getXpos <em>Xpos</em>}'.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Xpos</em>'.
-	 * @see org.eclipse.gef4.kgraph.KPoint#getXpos()
-	 * @see #getKPoint()
-	 * @generated
-	 */
-    EAttribute getKPoint_Xpos();
-
-    /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gef4.kgraph.KPoint#getYpos <em>Ypos</em>}'.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Ypos</em>'.
-	 * @see org.eclipse.gef4.kgraph.KPoint#getYpos()
-	 * @see #getKPoint()
-	 * @generated
-	 */
-    EAttribute getKPoint_Ypos();
-
-    /**
+				/**
 	 * Returns the meta object for class '{@link org.eclipse.gef4.kgraph.properties.IPropertyHolder <em>IProperty Holder</em>}'.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1746,6 +1679,17 @@ public interface KGraphPackage extends EPackage {
     EDataType getIProperty();
 
     /**
+	 * Returns the meta object for data type '{@link org.eclipse.gef4.geometry.planar.Point <em>Point</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Point</em>'.
+	 * @see org.eclipse.gef4.geometry.planar.Point
+	 * @model instanceClass="org.eclipse.gef4.geometry.planar.Point"
+	 * @generated
+	 */
+	EDataType getPoint();
+
+				/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1787,20 +1731,20 @@ public interface KGraphPackage extends EPackage {
         EAttribute KGRAPH_ELEMENT__DATA = eINSTANCE.getKGraphElement_Data();
 
         /**
+		 * The meta object literal for the '<em><b>Get Data</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation KGRAPH_ELEMENT___GET_DATA__CLASS = eINSTANCE.getKGraphElement__GetData__Class();
+
+								/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
 		 * @generated
 		 */
         EAttribute KGRAPH_ELEMENT__ID = eINSTANCE.getKGraphElement_Id();
-
-        /**
-		 * The meta object literal for the '<em><b>Get Data</b></em>' operation.
-		 * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-		 * @generated
-		 */
-        EOperation KGRAPH_ELEMENT___GET_DATA__ECLASS = eINSTANCE.getKGraphElement__GetData__EClass();
 
         /**
 		 * The meta object literal for the '{@link org.eclipse.gef4.kgraph.impl.KLabeledGraphElementImpl <em>KLabeled Graph Element</em>}' class.
@@ -1993,14 +1937,14 @@ public interface KGraphPackage extends EPackage {
         EClass KSHAPE_LAYOUT = eINSTANCE.getKShapeLayout();
 
         /**
-		 * The meta object literal for the '<em><b>Xpos</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Position</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-        EAttribute KSHAPE_LAYOUT__XPOS = eINSTANCE.getKShapeLayout_Xpos();
+		EAttribute KSHAPE_LAYOUT__POSITION = eINSTANCE.getKShapeLayout_Position();
 
-        /**
+								/**
 		 * The meta object literal for the '<em><b>Ypos</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -2035,56 +1979,30 @@ public interface KGraphPackage extends EPackage {
         EClass KEDGE_LAYOUT = eINSTANCE.getKEdgeLayout();
 
         /**
-		 * The meta object literal for the '<em><b>Source Point</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Start Point</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-        EReference KEDGE_LAYOUT__SOURCE_POINT = eINSTANCE.getKEdgeLayout_SourcePoint();
+		EAttribute KEDGE_LAYOUT__START_POINT = eINSTANCE.getKEdgeLayout_StartPoint();
 
-        /**
-		 * The meta object literal for the '<em><b>Target Point</b></em>' containment reference feature.
+								/**
+		 * The meta object literal for the '<em><b>End Point</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-        EReference KEDGE_LAYOUT__TARGET_POINT = eINSTANCE.getKEdgeLayout_TargetPoint();
+		EAttribute KEDGE_LAYOUT__END_POINT = eINSTANCE.getKEdgeLayout_EndPoint();
 
-        /**
-		 * The meta object literal for the '<em><b>Bend Points</b></em>' containment reference list feature.
+								/**
+		 * The meta object literal for the '<em><b>Way Points</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-        EReference KEDGE_LAYOUT__BEND_POINTS = eINSTANCE.getKEdgeLayout_BendPoints();
+		EAttribute KEDGE_LAYOUT__WAY_POINTS = eINSTANCE.getKEdgeLayout_WayPoints();
 
-        /**
-		 * The meta object literal for the '{@link org.eclipse.gef4.kgraph.impl.KPointImpl <em>KPoint</em>}' class.
-		 * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-		 * @see org.eclipse.gef4.kgraph.impl.KPointImpl
-		 * @see org.eclipse.gef4.kgraph.impl.KGraphPackageImpl#getKPoint()
-		 * @generated
-		 */
-        EClass KPOINT = eINSTANCE.getKPoint();
-
-        /**
-		 * The meta object literal for the '<em><b>Xpos</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-		 * @generated
-		 */
-        EAttribute KPOINT__XPOS = eINSTANCE.getKPoint_Xpos();
-
-        /**
-		 * The meta object literal for the '<em><b>Ypos</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-		 * @generated
-		 */
-        EAttribute KPOINT__YPOS = eINSTANCE.getKPoint_Ypos();
-
-        /**
+								/**
 		 * The meta object literal for the '{@link org.eclipse.gef4.kgraph.properties.IPropertyHolder <em>IProperty Holder</em>}' class.
 		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -2143,6 +2061,16 @@ public interface KGraphPackage extends EPackage {
 		 * @generated
 		 */
         EDataType IPROPERTY = eINSTANCE.getIProperty();
+
+								/**
+		 * The meta object literal for the '<em>Point</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gef4.geometry.planar.Point
+		 * @see org.eclipse.gef4.kgraph.impl.KGraphPackageImpl#getPoint()
+		 * @generated
+		 */
+		EDataType POINT = eINSTANCE.getPoint();
 
     }
 

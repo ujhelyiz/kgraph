@@ -10,9 +10,8 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.ETypeParameter;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
+import org.eclipse.gef4.geometry.planar.Point;
 import org.eclipse.gef4.kgraph.KEdge;
 import org.eclipse.gef4.kgraph.KEdgeLayout;
 import org.eclipse.gef4.kgraph.KGraphData;
@@ -22,10 +21,8 @@ import org.eclipse.gef4.kgraph.KGraphPackage;
 import org.eclipse.gef4.kgraph.KLabel;
 import org.eclipse.gef4.kgraph.KLabeledGraphElement;
 import org.eclipse.gef4.kgraph.KNode;
-import org.eclipse.gef4.kgraph.KPoint;
 import org.eclipse.gef4.kgraph.KPort;
 import org.eclipse.gef4.kgraph.KShapeLayout;
-
 import org.eclipse.gef4.kgraph.properties.IProperty;
 import org.eclipse.gef4.kgraph.properties.IPropertyHolder;
 
@@ -104,13 +101,6 @@ public class KGraphPackageImpl extends EPackageImpl implements KGraphPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass kPointEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass iPropertyHolderEClass = null;
 
 	/**
@@ -119,6 +109,13 @@ public class KGraphPackageImpl extends EPackageImpl implements KGraphPackage {
 	 * @generated
 	 */
 	private EDataType iPropertyEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType pointEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -204,8 +201,8 @@ public class KGraphPackageImpl extends EPackageImpl implements KGraphPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getKGraphElement_Id() {
-		return (EAttribute)kGraphElementEClass.getEStructuralFeatures().get(0);
+	public EOperation getKGraphElement__GetData__Class() {
+		return kGraphElementEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -213,8 +210,8 @@ public class KGraphPackageImpl extends EPackageImpl implements KGraphPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getKGraphElement__GetData__EClass() {
-		return kGraphElementEClass.getEOperations().get(0);
+	public EAttribute getKGraphElement_Id() {
+		return (EAttribute)kGraphElementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -420,7 +417,7 @@ public class KGraphPackageImpl extends EPackageImpl implements KGraphPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getKShapeLayout_Xpos() {
+	public EAttribute getKShapeLayout_Position() {
 		return (EAttribute)kShapeLayoutEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -465,8 +462,8 @@ public class KGraphPackageImpl extends EPackageImpl implements KGraphPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getKEdgeLayout_SourcePoint() {
-		return (EReference)kEdgeLayoutEClass.getEStructuralFeatures().get(0);
+	public EAttribute getKEdgeLayout_StartPoint() {
+		return (EAttribute)kEdgeLayoutEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -474,8 +471,8 @@ public class KGraphPackageImpl extends EPackageImpl implements KGraphPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getKEdgeLayout_TargetPoint() {
-		return (EReference)kEdgeLayoutEClass.getEStructuralFeatures().get(1);
+	public EAttribute getKEdgeLayout_EndPoint() {
+		return (EAttribute)kEdgeLayoutEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -483,35 +480,8 @@ public class KGraphPackageImpl extends EPackageImpl implements KGraphPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getKEdgeLayout_BendPoints() {
-		return (EReference)kEdgeLayoutEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getKPoint() {
-		return kPointEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getKPoint_Xpos() {
-		return (EAttribute)kPointEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getKPoint_Ypos() {
-		return (EAttribute)kPointEClass.getEStructuralFeatures().get(1);
+	public EAttribute getKEdgeLayout_WayPoints() {
+		return (EAttribute)kEdgeLayoutEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -582,6 +552,15 @@ public class KGraphPackageImpl extends EPackageImpl implements KGraphPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getPoint() {
+		return pointEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public KGraphFactory getKGraphFactory() {
 		return (KGraphFactory)getEFactoryInstance();
 	}
@@ -608,7 +587,7 @@ public class KGraphPackageImpl extends EPackageImpl implements KGraphPackage {
 		kGraphElementEClass = createEClass(KGRAPH_ELEMENT);
 		createEAttribute(kGraphElementEClass, KGRAPH_ELEMENT__ID);
 		createEAttribute(kGraphElementEClass, KGRAPH_ELEMENT__DATA);
-		createEOperation(kGraphElementEClass, KGRAPH_ELEMENT___GET_DATA__ECLASS);
+		createEOperation(kGraphElementEClass, KGRAPH_ELEMENT___GET_DATA__CLASS);
 
 		kLabeledGraphElementEClass = createEClass(KLABELED_GRAPH_ELEMENT);
 		createEReference(kLabeledGraphElementEClass, KLABELED_GRAPH_ELEMENT__LABELS);
@@ -638,19 +617,15 @@ public class KGraphPackageImpl extends EPackageImpl implements KGraphPackage {
 		createEReference(kLabelEClass, KLABEL__CONTAINER);
 
 		kShapeLayoutEClass = createEClass(KSHAPE_LAYOUT);
-		createEAttribute(kShapeLayoutEClass, KSHAPE_LAYOUT__XPOS);
+		createEAttribute(kShapeLayoutEClass, KSHAPE_LAYOUT__POSITION);
 		createEAttribute(kShapeLayoutEClass, KSHAPE_LAYOUT__YPOS);
 		createEAttribute(kShapeLayoutEClass, KSHAPE_LAYOUT__WIDTH);
 		createEAttribute(kShapeLayoutEClass, KSHAPE_LAYOUT__HEIGHT);
 
 		kEdgeLayoutEClass = createEClass(KEDGE_LAYOUT);
-		createEReference(kEdgeLayoutEClass, KEDGE_LAYOUT__SOURCE_POINT);
-		createEReference(kEdgeLayoutEClass, KEDGE_LAYOUT__TARGET_POINT);
-		createEReference(kEdgeLayoutEClass, KEDGE_LAYOUT__BEND_POINTS);
-
-		kPointEClass = createEClass(KPOINT);
-		createEAttribute(kPointEClass, KPOINT__XPOS);
-		createEAttribute(kPointEClass, KPOINT__YPOS);
+		createEAttribute(kEdgeLayoutEClass, KEDGE_LAYOUT__START_POINT);
+		createEAttribute(kEdgeLayoutEClass, KEDGE_LAYOUT__END_POINT);
+		createEAttribute(kEdgeLayoutEClass, KEDGE_LAYOUT__WAY_POINTS);
 
 		iPropertyHolderEClass = createEClass(IPROPERTY_HOLDER);
 		createEOperation(iPropertyHolderEClass, IPROPERTY_HOLDER___SET_PROPERTY__IPROPERTY_OBJECT);
@@ -661,6 +636,7 @@ public class KGraphPackageImpl extends EPackageImpl implements KGraphPackage {
 
 		// Create data types
 		iPropertyEDataType = createEDataType(IPROPERTY);
+		pointEDataType = createEDataType(POINT);
 	}
 
 	/**
@@ -709,7 +685,7 @@ public class KGraphPackageImpl extends EPackageImpl implements KGraphPackage {
 		initEAttribute(getKGraphElement_Id(), ecorePackage.getEString(), "id", null, 0, 1, KGraphElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getKGraphElement_Data(), ecorePackage.getEJavaObject(), "data", null, 0, -1, KGraphElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		EOperation op = initEOperation(getKGraphElement__GetData__EClass(), null, "getData", 0, 1, IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getKGraphElement__GetData__Class(), null, "getData", 0, 1, IS_UNIQUE, IS_ORDERED);
 		ETypeParameter t1 = addETypeParameter(op, "T");
 		EGenericType g1 = createEGenericType(ecorePackage.getEJavaObject());
 		t1.getEBounds().add(g1);
@@ -748,19 +724,15 @@ public class KGraphPackageImpl extends EPackageImpl implements KGraphPackage {
 		initEReference(getKLabel_Container(), this.getKLabeledGraphElement(), this.getKLabeledGraphElement_Labels(), "container", null, 1, 1, KLabel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(kShapeLayoutEClass, KShapeLayout.class, "KShapeLayout", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getKShapeLayout_Xpos(), ecorePackage.getEDouble(), "xpos", null, 0, 1, KShapeLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getKShapeLayout_Position(), ecorePackage.getEDouble(), "position", null, 0, 1, KShapeLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getKShapeLayout_Ypos(), ecorePackage.getEDouble(), "ypos", null, 0, 1, KShapeLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getKShapeLayout_Width(), ecorePackage.getEDouble(), "width", null, 0, 1, KShapeLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getKShapeLayout_Height(), ecorePackage.getEDouble(), "height", null, 0, 1, KShapeLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(kEdgeLayoutEClass, KEdgeLayout.class, "KEdgeLayout", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getKEdgeLayout_SourcePoint(), this.getKPoint(), null, "sourcePoint", null, 0, 1, KEdgeLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getKEdgeLayout_TargetPoint(), this.getKPoint(), null, "targetPoint", null, 0, 1, KEdgeLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getKEdgeLayout_BendPoints(), this.getKPoint(), null, "bendPoints", null, 0, -1, KEdgeLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(kPointEClass, KPoint.class, "KPoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getKPoint_Xpos(), ecorePackage.getEDouble(), "xpos", null, 1, 1, KPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getKPoint_Ypos(), ecorePackage.getEDouble(), "ypos", null, 1, 1, KPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getKEdgeLayout_StartPoint(), this.getPoint(), "startPoint", null, 0, 1, KEdgeLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getKEdgeLayout_EndPoint(), this.getPoint(), "endPoint", null, 0, 1, KEdgeLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getKEdgeLayout_WayPoints(), this.getPoint(), "wayPoints", null, 0, -1, KEdgeLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iPropertyHolderEClass, IPropertyHolder.class, "IPropertyHolder", IS_ABSTRACT, IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 
@@ -805,6 +777,7 @@ public class KGraphPackageImpl extends EPackageImpl implements KGraphPackage {
 
 		// Initialize data types
 		initEDataType(iPropertyEDataType, IProperty.class, "IProperty", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(pointEDataType, Point.class, "Point", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

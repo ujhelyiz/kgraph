@@ -11,14 +11,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.gef4.geometry.planar.Point;
 import org.eclipse.gef4.kgraph.KEdge;
 import org.eclipse.gef4.kgraph.KEdgeLayout;
 import org.eclipse.gef4.kgraph.KGraphPackage;
 import org.eclipse.gef4.kgraph.KNode;
-import org.eclipse.gef4.kgraph.KPoint;
 import org.eclipse.gef4.kgraph.KPort;
 
 /**
@@ -28,9 +27,9 @@ import org.eclipse.gef4.kgraph.KPort;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gef4.kgraph.impl.KEdgeImpl#getSourcePoint <em>Source Point</em>}</li>
- *   <li>{@link org.eclipse.gef4.kgraph.impl.KEdgeImpl#getTargetPoint <em>Target Point</em>}</li>
- *   <li>{@link org.eclipse.gef4.kgraph.impl.KEdgeImpl#getBendPoints <em>Bend Points</em>}</li>
+ *   <li>{@link org.eclipse.gef4.kgraph.impl.KEdgeImpl#getStartPoint <em>Start Point</em>}</li>
+ *   <li>{@link org.eclipse.gef4.kgraph.impl.KEdgeImpl#getEndPoint <em>End Point</em>}</li>
+ *   <li>{@link org.eclipse.gef4.kgraph.impl.KEdgeImpl#getWayPoints <em>Way Points</em>}</li>
  *   <li>{@link org.eclipse.gef4.kgraph.impl.KEdgeImpl#getSourceNode <em>Source Node</em>}</li>
  *   <li>{@link org.eclipse.gef4.kgraph.impl.KEdgeImpl#getTargetNode <em>Target Node</em>}</li>
  *   <li>{@link org.eclipse.gef4.kgraph.impl.KEdgeImpl#getSourcePort <em>Source Port</em>}</li>
@@ -42,36 +41,56 @@ import org.eclipse.gef4.kgraph.KPort;
  */
 public class KEdgeImpl extends KLabeledGraphElementImpl implements KEdge {
     /**
-	 * The cached value of the '{@link #getSourcePoint() <em>Source Point</em>}' containment reference.
+	 * The default value of the '{@link #getStartPoint() <em>Start Point</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getSourcePoint()
+	 * <!-- end-user-doc -->
+	 * @see #getStartPoint()
 	 * @generated
 	 * @ordered
 	 */
-    protected KPoint sourcePoint;
+	protected static final Point START_POINT_EDEFAULT = null;
 
-    /**
-	 * The cached value of the '{@link #getTargetPoint() <em>Target Point</em>}' containment reference.
+	/**
+	 * The cached value of the '{@link #getStartPoint() <em>Start Point</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getTargetPoint()
+	 * <!-- end-user-doc -->
+	 * @see #getStartPoint()
 	 * @generated
 	 * @ordered
 	 */
-    protected KPoint targetPoint;
+	protected Point startPoint = START_POINT_EDEFAULT;
 
-    /**
-	 * The cached value of the '{@link #getBendPoints() <em>Bend Points</em>}' containment reference list.
+	/**
+	 * The default value of the '{@link #getEndPoint() <em>End Point</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getBendPoints()
+	 * <!-- end-user-doc -->
+	 * @see #getEndPoint()
 	 * @generated
 	 * @ordered
 	 */
-    protected EList<KPoint> bendPoints;
+	protected static final Point END_POINT_EDEFAULT = null;
 
-    /**
+	/**
+	 * The cached value of the '{@link #getEndPoint() <em>End Point</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEndPoint()
+	 * @generated
+	 * @ordered
+	 */
+	protected Point endPoint = END_POINT_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getWayPoints() <em>Way Points</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWayPoints()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Point> wayPoints;
+
+				/**
 	 * The cached value of the '{@link #getTargetNode() <em>Target Node</em>}' reference.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -122,103 +141,59 @@ public class KEdgeImpl extends KLabeledGraphElementImpl implements KEdge {
 
     /**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public KPoint getSourcePoint() {
-		return sourcePoint;
+	public Point getStartPoint() {
+		return startPoint;
 	}
 
-    /**
+				/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain basicSetSourcePoint(KPoint newSourcePoint, NotificationChain msgs) {
-		KPoint oldSourcePoint = sourcePoint;
-		sourcePoint = newSourcePoint;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, KGraphPackage.KEDGE__SOURCE_POINT, oldSourcePoint, newSourcePoint);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public void setStartPoint(Point newStartPoint) {
+		Point oldStartPoint = startPoint;
+		startPoint = newStartPoint;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KEDGE__START_POINT, oldStartPoint, startPoint));
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Point getEndPoint() {
+		return endPoint;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEndPoint(Point newEndPoint) {
+		Point oldEndPoint = endPoint;
+		endPoint = newEndPoint;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KEDGE__END_POINT, oldEndPoint, endPoint));
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<Point> getWayPoints() {
+		if (wayPoints == null) {
+			wayPoints = new EDataTypeUniqueEList<Point>(Point.class, this, KGraphPackage.KEDGE__WAY_POINTS);
 		}
-		return msgs;
+		return wayPoints;
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 */
-    public void setSourcePoint(KPoint newSourcePoint) {
-		if (newSourcePoint != sourcePoint) {
-			NotificationChain msgs = null;
-			if (sourcePoint != null)
-				msgs = ((InternalEObject)sourcePoint).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - KGraphPackage.KEDGE__SOURCE_POINT, null, msgs);
-			if (newSourcePoint != null)
-				msgs = ((InternalEObject)newSourcePoint).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - KGraphPackage.KEDGE__SOURCE_POINT, null, msgs);
-			msgs = basicSetSourcePoint(newSourcePoint, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KEDGE__SOURCE_POINT, newSourcePoint, newSourcePoint));
-	}
-
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 */
-    public KPoint getTargetPoint() {
-		return targetPoint;
-	}
-
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 */
-    public NotificationChain basicSetTargetPoint(KPoint newTargetPoint, NotificationChain msgs) {
-		KPoint oldTargetPoint = targetPoint;
-		targetPoint = newTargetPoint;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, KGraphPackage.KEDGE__TARGET_POINT, oldTargetPoint, newTargetPoint);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 */
-    public void setTargetPoint(KPoint newTargetPoint) {
-		if (newTargetPoint != targetPoint) {
-			NotificationChain msgs = null;
-			if (targetPoint != null)
-				msgs = ((InternalEObject)targetPoint).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - KGraphPackage.KEDGE__TARGET_POINT, null, msgs);
-			if (newTargetPoint != null)
-				msgs = ((InternalEObject)newTargetPoint).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - KGraphPackage.KEDGE__TARGET_POINT, null, msgs);
-			msgs = basicSetTargetPoint(newTargetPoint, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KEDGE__TARGET_POINT, newTargetPoint, newTargetPoint));
-	}
-
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 */
-    public List<KPoint> getBendPoints() {
-		if (bendPoints == null) {
-			bendPoints = new EObjectContainmentEList<KPoint>(KPoint.class, this, KGraphPackage.KEDGE__BEND_POINTS);
-		}
-		return bendPoints;
-	}
-
-    /**
+				/**
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated
@@ -475,12 +450,6 @@ public class KEdgeImpl extends KLabeledGraphElementImpl implements KEdge {
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case KGraphPackage.KEDGE__SOURCE_POINT:
-				return basicSetSourcePoint(null, msgs);
-			case KGraphPackage.KEDGE__TARGET_POINT:
-				return basicSetTargetPoint(null, msgs);
-			case KGraphPackage.KEDGE__BEND_POINTS:
-				return ((InternalEList<?>)getBendPoints()).basicRemove(otherEnd, msgs);
 			case KGraphPackage.KEDGE__SOURCE_NODE:
 				return basicSetSourceNode(null, msgs);
 			case KGraphPackage.KEDGE__TARGET_NODE:
@@ -515,12 +484,12 @@ public class KEdgeImpl extends KLabeledGraphElementImpl implements KEdge {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case KGraphPackage.KEDGE__SOURCE_POINT:
-				return getSourcePoint();
-			case KGraphPackage.KEDGE__TARGET_POINT:
-				return getTargetPoint();
-			case KGraphPackage.KEDGE__BEND_POINTS:
-				return getBendPoints();
+			case KGraphPackage.KEDGE__START_POINT:
+				return getStartPoint();
+			case KGraphPackage.KEDGE__END_POINT:
+				return getEndPoint();
+			case KGraphPackage.KEDGE__WAY_POINTS:
+				return getWayPoints();
 			case KGraphPackage.KEDGE__SOURCE_NODE:
 				return getSourceNode();
 			case KGraphPackage.KEDGE__TARGET_NODE:
@@ -545,15 +514,15 @@ public class KEdgeImpl extends KLabeledGraphElementImpl implements KEdge {
     @Override
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case KGraphPackage.KEDGE__SOURCE_POINT:
-				setSourcePoint((KPoint)newValue);
+			case KGraphPackage.KEDGE__START_POINT:
+				setStartPoint((Point)newValue);
 				return;
-			case KGraphPackage.KEDGE__TARGET_POINT:
-				setTargetPoint((KPoint)newValue);
+			case KGraphPackage.KEDGE__END_POINT:
+				setEndPoint((Point)newValue);
 				return;
-			case KGraphPackage.KEDGE__BEND_POINTS:
-				getBendPoints().clear();
-				getBendPoints().addAll((Collection<? extends KPoint>)newValue);
+			case KGraphPackage.KEDGE__WAY_POINTS:
+				getWayPoints().clear();
+				getWayPoints().addAll((Collection<? extends Point>)newValue);
 				return;
 			case KGraphPackage.KEDGE__SOURCE_NODE:
 				setSourceNode((KNode)newValue);
@@ -579,14 +548,14 @@ public class KEdgeImpl extends KLabeledGraphElementImpl implements KEdge {
     @Override
     public void eUnset(int featureID) {
 		switch (featureID) {
-			case KGraphPackage.KEDGE__SOURCE_POINT:
-				setSourcePoint((KPoint)null);
+			case KGraphPackage.KEDGE__START_POINT:
+				setStartPoint(START_POINT_EDEFAULT);
 				return;
-			case KGraphPackage.KEDGE__TARGET_POINT:
-				setTargetPoint((KPoint)null);
+			case KGraphPackage.KEDGE__END_POINT:
+				setEndPoint(END_POINT_EDEFAULT);
 				return;
-			case KGraphPackage.KEDGE__BEND_POINTS:
-				getBendPoints().clear();
+			case KGraphPackage.KEDGE__WAY_POINTS:
+				getWayPoints().clear();
 				return;
 			case KGraphPackage.KEDGE__SOURCE_NODE:
 				setSourceNode((KNode)null);
@@ -612,12 +581,12 @@ public class KEdgeImpl extends KLabeledGraphElementImpl implements KEdge {
     @Override
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case KGraphPackage.KEDGE__SOURCE_POINT:
-				return sourcePoint != null;
-			case KGraphPackage.KEDGE__TARGET_POINT:
-				return targetPoint != null;
-			case KGraphPackage.KEDGE__BEND_POINTS:
-				return bendPoints != null && !bendPoints.isEmpty();
+			case KGraphPackage.KEDGE__START_POINT:
+				return START_POINT_EDEFAULT == null ? startPoint != null : !START_POINT_EDEFAULT.equals(startPoint);
+			case KGraphPackage.KEDGE__END_POINT:
+				return END_POINT_EDEFAULT == null ? endPoint != null : !END_POINT_EDEFAULT.equals(endPoint);
+			case KGraphPackage.KEDGE__WAY_POINTS:
+				return wayPoints != null && !wayPoints.isEmpty();
 			case KGraphPackage.KEDGE__SOURCE_NODE:
 				return getSourceNode() != null;
 			case KGraphPackage.KEDGE__TARGET_NODE:
@@ -639,9 +608,9 @@ public class KEdgeImpl extends KLabeledGraphElementImpl implements KEdge {
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == KEdgeLayout.class) {
 			switch (derivedFeatureID) {
-				case KGraphPackage.KEDGE__SOURCE_POINT: return KGraphPackage.KEDGE_LAYOUT__SOURCE_POINT;
-				case KGraphPackage.KEDGE__TARGET_POINT: return KGraphPackage.KEDGE_LAYOUT__TARGET_POINT;
-				case KGraphPackage.KEDGE__BEND_POINTS: return KGraphPackage.KEDGE_LAYOUT__BEND_POINTS;
+				case KGraphPackage.KEDGE__START_POINT: return KGraphPackage.KEDGE_LAYOUT__START_POINT;
+				case KGraphPackage.KEDGE__END_POINT: return KGraphPackage.KEDGE_LAYOUT__END_POINT;
+				case KGraphPackage.KEDGE__WAY_POINTS: return KGraphPackage.KEDGE_LAYOUT__WAY_POINTS;
 				default: return -1;
 			}
 		}
@@ -657,13 +626,33 @@ public class KEdgeImpl extends KLabeledGraphElementImpl implements KEdge {
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == KEdgeLayout.class) {
 			switch (baseFeatureID) {
-				case KGraphPackage.KEDGE_LAYOUT__SOURCE_POINT: return KGraphPackage.KEDGE__SOURCE_POINT;
-				case KGraphPackage.KEDGE_LAYOUT__TARGET_POINT: return KGraphPackage.KEDGE__TARGET_POINT;
-				case KGraphPackage.KEDGE_LAYOUT__BEND_POINTS: return KGraphPackage.KEDGE__BEND_POINTS;
+				case KGraphPackage.KEDGE_LAYOUT__START_POINT: return KGraphPackage.KEDGE__START_POINT;
+				case KGraphPackage.KEDGE_LAYOUT__END_POINT: return KGraphPackage.KEDGE__END_POINT;
+				case KGraphPackage.KEDGE_LAYOUT__WAY_POINTS: return KGraphPackage.KEDGE__WAY_POINTS;
 				default: return -1;
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (startPoint: ");
+		result.append(startPoint);
+		result.append(", endPoint: ");
+		result.append(endPoint);
+		result.append(", wayPoints: ");
+		result.append(wayPoints);
+		result.append(')');
+		return result.toString();
 	}
 
 } //KEdgeImpl

@@ -28,7 +28,7 @@ import org.eclipse.gef4.kgraph.KShapeLayout;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gef4.kgraph.impl.KNodeImpl#getXpos <em>Xpos</em>}</li>
+ *   <li>{@link org.eclipse.gef4.kgraph.impl.KNodeImpl#getPosition <em>Position</em>}</li>
  *   <li>{@link org.eclipse.gef4.kgraph.impl.KNodeImpl#getYpos <em>Ypos</em>}</li>
  *   <li>{@link org.eclipse.gef4.kgraph.impl.KNodeImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link org.eclipse.gef4.kgraph.impl.KNodeImpl#getHeight <em>Height</em>}</li>
@@ -44,26 +44,26 @@ import org.eclipse.gef4.kgraph.KShapeLayout;
  */
 public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
     /**
-	 * The default value of the '{@link #getXpos() <em>Xpos</em>}' attribute.
+	 * The default value of the '{@link #getPosition() <em>Position</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getXpos()
+	 * <!-- end-user-doc -->
+	 * @see #getPosition()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final double XPOS_EDEFAULT = 0.0;
+	protected static final double POSITION_EDEFAULT = 0.0;
 
-    /**
-	 * The cached value of the '{@link #getXpos() <em>Xpos</em>}' attribute.
+	/**
+	 * The cached value of the '{@link #getPosition() <em>Position</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getXpos()
+	 * <!-- end-user-doc -->
+	 * @see #getPosition()
 	 * @generated
 	 * @ordered
 	 */
-    protected double xpos = XPOS_EDEFAULT;
+	protected double position = POSITION_EDEFAULT;
 
-    /**
+				/**
 	 * The default value of the '{@link #getYpos() <em>Ypos</em>}' attribute.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -184,26 +184,26 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
 
     /**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public double getXpos() {
-		return xpos;
+	public double getPosition() {
+		return position;
 	}
 
-    /**
+				/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setXpos(double newXpos) {
-		double oldXpos = xpos;
-		xpos = newXpos;
+	public void setPosition(double newPosition) {
+		double oldPosition = position;
+		position = newPosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KNODE__XPOS, oldXpos, xpos));
+			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KNODE__POSITION, oldPosition, position));
 	}
 
-    /**
+				/**
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated
@@ -424,8 +424,8 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case KGraphPackage.KNODE__XPOS:
-				return getXpos();
+			case KGraphPackage.KNODE__POSITION:
+				return getPosition();
 			case KGraphPackage.KNODE__YPOS:
 				return getYpos();
 			case KGraphPackage.KNODE__WIDTH:
@@ -455,8 +455,8 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
     @Override
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case KGraphPackage.KNODE__XPOS:
-				setXpos((Double)newValue);
+			case KGraphPackage.KNODE__POSITION:
+				setPosition((Double)newValue);
 				return;
 			case KGraphPackage.KNODE__YPOS:
 				setYpos((Double)newValue);
@@ -498,8 +498,8 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
     @Override
     public void eUnset(int featureID) {
 		switch (featureID) {
-			case KGraphPackage.KNODE__XPOS:
-				setXpos(XPOS_EDEFAULT);
+			case KGraphPackage.KNODE__POSITION:
+				setPosition(POSITION_EDEFAULT);
 				return;
 			case KGraphPackage.KNODE__YPOS:
 				setYpos(YPOS_EDEFAULT);
@@ -537,8 +537,8 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
     @Override
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case KGraphPackage.KNODE__XPOS:
-				return xpos != XPOS_EDEFAULT;
+			case KGraphPackage.KNODE__POSITION:
+				return position != POSITION_EDEFAULT;
 			case KGraphPackage.KNODE__YPOS:
 				return ypos != YPOS_EDEFAULT;
 			case KGraphPackage.KNODE__WIDTH:
@@ -568,7 +568,7 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == KShapeLayout.class) {
 			switch (derivedFeatureID) {
-				case KGraphPackage.KNODE__XPOS: return KGraphPackage.KSHAPE_LAYOUT__XPOS;
+				case KGraphPackage.KNODE__POSITION: return KGraphPackage.KSHAPE_LAYOUT__POSITION;
 				case KGraphPackage.KNODE__YPOS: return KGraphPackage.KSHAPE_LAYOUT__YPOS;
 				case KGraphPackage.KNODE__WIDTH: return KGraphPackage.KSHAPE_LAYOUT__WIDTH;
 				case KGraphPackage.KNODE__HEIGHT: return KGraphPackage.KSHAPE_LAYOUT__HEIGHT;
@@ -587,7 +587,7 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == KShapeLayout.class) {
 			switch (baseFeatureID) {
-				case KGraphPackage.KSHAPE_LAYOUT__XPOS: return KGraphPackage.KNODE__XPOS;
+				case KGraphPackage.KSHAPE_LAYOUT__POSITION: return KGraphPackage.KNODE__POSITION;
 				case KGraphPackage.KSHAPE_LAYOUT__YPOS: return KGraphPackage.KNODE__YPOS;
 				case KGraphPackage.KSHAPE_LAYOUT__WIDTH: return KGraphPackage.KNODE__WIDTH;
 				case KGraphPackage.KSHAPE_LAYOUT__HEIGHT: return KGraphPackage.KNODE__HEIGHT;
@@ -607,8 +607,8 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (xpos: ");
-		result.append(xpos);
+		result.append(" (position: ");
+		result.append(position);
 		result.append(", ypos: ");
 		result.append(ypos);
 		result.append(", width: ");

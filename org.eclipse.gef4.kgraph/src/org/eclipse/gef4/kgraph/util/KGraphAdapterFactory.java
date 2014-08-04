@@ -102,10 +102,6 @@ public class KGraphAdapterFactory extends AdapterFactoryImpl {
 				return createKEdgeLayoutAdapter();
 			}
 			@Override
-			public Adapter caseKPoint(KPoint object) {
-				return createKPointAdapter();
-			}
-			@Override
 			public Adapter caseIPropertyHolder(IPropertyHolder object) {
 				return createIPropertyHolderAdapter();
 			}
@@ -252,20 +248,6 @@ public class KGraphAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
     public Adapter createKEdgeLayoutAdapter() {
-		return null;
-	}
-
-    /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gef4.kgraph.KPoint <em>KPoint</em>}'.
-	 * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gef4.kgraph.KPoint
-	 * @generated
-	 */
-    public Adapter createKPointAdapter() {
 		return null;
 	}
 
