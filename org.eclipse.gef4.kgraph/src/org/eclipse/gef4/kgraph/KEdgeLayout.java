@@ -36,73 +36,73 @@ import java.util.List;
  */
 public interface KEdgeLayout {
     /**
-     * Returns the value of the '<em><b>Source Point</b></em>' containment reference.
-     * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Source Point</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * <!-- begin-model-doc -->
-     * The source point is the point at which the edge touches the source node
-     * or source port. The coordinates of source points must obey the general
-     * rules for edge coordinates defined above.
-     * <!-- end-model-doc -->
-     * @return the value of the '<em>Source Point</em>' containment reference.
-     * @see #setSourcePoint(KPoint)
-     * @see org.eclipse.gef4.kgraph.KGraphPackage#getKEdgeLayout_SourcePoint()
-     * @model containment="true"
-     * @generated
-     */
+	 * <!-- begin-model-doc -->
+	 * The source point is the point at which the edge touches the source node
+	 * or source port. The coordinates of source points must obey the general
+	 * rules for edge coordinates defined above.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Source Point</em>' containment reference.
+	 * @see #setSourcePoint(KPoint)
+	 * @see org.eclipse.gef4.kgraph.KGraphPackage#getKEdgeLayout_SourcePoint()
+	 * @model containment="true"
+	 * @generated
+	 */
     KPoint getSourcePoint();
 
     /**
-     * Sets the value of the '{@link org.eclipse.gef4.kgraph.KEdgeLayout#getSourcePoint <em>Source Point</em>}' containment reference.
-     * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link org.eclipse.gef4.kgraph.KEdgeLayout#getSourcePoint <em>Source Point</em>}' containment reference.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Source Point</em>' containment reference.
-     * @see #getSourcePoint()
-     * @generated
-     */
+	 * @param value the new value of the '<em>Source Point</em>' containment reference.
+	 * @see #getSourcePoint()
+	 * @generated
+	 */
     void setSourcePoint(KPoint value);
 
     /**
-     * Returns the value of the '<em><b>Target Point</b></em>' containment reference.
-     * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Target Point</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * <!-- begin-model-doc -->
-     * The target point is the point at which the edge touches the target node
-     * or target port. The coordinates of target points must obey the general
-     * rules for edge coordinates defined above.
-     * <!-- end-model-doc -->
-     * @return the value of the '<em>Target Point</em>' containment reference.
-     * @see #setTargetPoint(KPoint)
-     * @see org.eclipse.gef4.kgraph.KGraphPackage#getKEdgeLayout_TargetPoint()
-     * @model containment="true"
-     * @generated
-     */
+	 * <!-- begin-model-doc -->
+	 * The target point is the point at which the edge touches the target node
+	 * or target port. The coordinates of target points must obey the general
+	 * rules for edge coordinates defined above.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Target Point</em>' containment reference.
+	 * @see #setTargetPoint(KPoint)
+	 * @see org.eclipse.gef4.kgraph.KGraphPackage#getKEdgeLayout_TargetPoint()
+	 * @model containment="true"
+	 * @generated
+	 */
     KPoint getTargetPoint();
 
     /**
-     * Sets the value of the '{@link org.eclipse.gef4.kgraph.KEdgeLayout#getTargetPoint <em>Target Point</em>}' containment reference.
-     * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link org.eclipse.gef4.kgraph.KEdgeLayout#getTargetPoint <em>Target Point</em>}' containment reference.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Target Point</em>' containment reference.
-     * @see #getTargetPoint()
-     * @generated
-     */
+	 * @param value the new value of the '<em>Target Point</em>' containment reference.
+	 * @see #getTargetPoint()
+	 * @generated
+	 */
     void setTargetPoint(KPoint value);
 
     /**
-     * Returns the value of the '<em><b>Bend Points</b></em>' containment reference list.
-     * The list contents are of type {@link org.eclipse.gef4.kgraph.KPoint}.
-     * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Bend Points</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.gef4.kgraph.KPoint}.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * <!-- begin-model-doc -->
-     * The coordinates of bend points must obey the general rules for edge
-     * coordinates defined above.
-     * <!-- end-model-doc -->
-     * @return the value of the '<em>Bend Points</em>' containment reference list.
-     * @see org.eclipse.gef4.kgraph.KGraphPackage#getKEdgeLayout_BendPoints()
-     * @model containment="true"
-     * @generated
-     */
+	 * <!-- begin-model-doc -->
+	 * The coordinates of bend points must obey the general rules for edge
+	 * coordinates defined above.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Bend Points</em>' containment reference list.
+	 * @see org.eclipse.gef4.kgraph.KGraphPackage#getKEdgeLayout_BendPoints()
+	 * @model containment="true"
+	 * @generated
+	 */
     List<KPoint> getBendPoints();
 
 } // KEdgeLayout

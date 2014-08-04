@@ -2,6 +2,8 @@
  */
 package org.eclipse.gef4.kgraph;
 
+import org.eclipse.gef4.kgraph.properties.IPropertyHolder;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -15,8 +17,8 @@ package org.eclipse.gef4.kgraph;
  *
  *
  * @see org.eclipse.gef4.kgraph.KGraphPackage#getKGraphData()
- * @model
+ * @model superTypes="org.eclipse.gef4.kgraph.IPropertyHolder"
  * @generated
  */
-public interface KGraphData extends EMapPropertyHolder {
+public interface KGraphData extends IPropertyHolder {
 } // KGraphData

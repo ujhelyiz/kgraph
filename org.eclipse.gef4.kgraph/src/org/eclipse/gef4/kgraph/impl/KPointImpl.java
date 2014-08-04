@@ -25,190 +25,190 @@ import org.eclipse.gef4.kgraph.KPoint;
  */
 public class KPointImpl extends MinimalEObjectImpl.Container implements KPoint {
     /**
-     * The default value of the '{@link #getXpos() <em>Xpos</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getXpos() <em>Xpos</em>}' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #getXpos()
-     * @generated
-     * @ordered
-     */
+	 * @see #getXpos()
+	 * @generated
+	 * @ordered
+	 */
     protected static final double XPOS_EDEFAULT = 0.0;
 
     /**
-     * The cached value of the '{@link #getXpos() <em>Xpos</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getXpos() <em>Xpos</em>}' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #getXpos()
-     * @generated
-     * @ordered
-     */
+	 * @see #getXpos()
+	 * @generated
+	 * @ordered
+	 */
     protected double xpos = XPOS_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getYpos() <em>Ypos</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getYpos() <em>Ypos</em>}' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #getYpos()
-     * @generated
-     * @ordered
-     */
+	 * @see #getYpos()
+	 * @generated
+	 * @ordered
+	 */
     protected static final double YPOS_EDEFAULT = 0.0;
 
     /**
-     * The cached value of the '{@link #getYpos() <em>Ypos</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getYpos() <em>Ypos</em>}' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #getYpos()
-     * @generated
-     * @ordered
-     */
+	 * @see #getYpos()
+	 * @generated
+	 * @ordered
+	 */
     protected double ypos = YPOS_EDEFAULT;
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     protected KPointImpl() {
-        super();
-    }
+		super();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     @Override
     protected EClass eStaticClass() {
-        return KGraphPackage.Literals.KPOINT;
-    }
+		return KGraphPackage.Literals.KPOINT;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public double getXpos() {
-        return xpos;
-    }
+		return xpos;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void setXpos(double newXpos) {
-        double oldXpos = xpos;
-        xpos = newXpos;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KPOINT__XPOS, oldXpos, xpos));
-    }
+		double oldXpos = xpos;
+		xpos = newXpos;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KPOINT__XPOS, oldXpos, xpos));
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public double getYpos() {
-        return ypos;
-    }
+		return ypos;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void setYpos(double newYpos) {
-        double oldYpos = ypos;
-        ypos = newYpos;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KPOINT__YPOS, oldYpos, ypos));
-    }
+		double oldYpos = ypos;
+		ypos = newYpos;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KPOINT__YPOS, oldYpos, ypos));
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
-        switch (featureID) {
-            case KGraphPackage.KPOINT__XPOS:
-                return getXpos();
-            case KGraphPackage.KPOINT__YPOS:
-                return getYpos();
-        }
-        return super.eGet(featureID, resolve, coreType);
-    }
+		switch (featureID) {
+			case KGraphPackage.KPOINT__XPOS:
+				return getXpos();
+			case KGraphPackage.KPOINT__YPOS:
+				return getYpos();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     @Override
     public void eSet(int featureID, Object newValue) {
-        switch (featureID) {
-            case KGraphPackage.KPOINT__XPOS:
-                setXpos((Double)newValue);
-                return;
-            case KGraphPackage.KPOINT__YPOS:
-                setYpos((Double)newValue);
-                return;
-        }
-        super.eSet(featureID, newValue);
-    }
+		switch (featureID) {
+			case KGraphPackage.KPOINT__XPOS:
+				setXpos((Double)newValue);
+				return;
+			case KGraphPackage.KPOINT__YPOS:
+				setYpos((Double)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     @Override
     public void eUnset(int featureID) {
-        switch (featureID) {
-            case KGraphPackage.KPOINT__XPOS:
-                setXpos(XPOS_EDEFAULT);
-                return;
-            case KGraphPackage.KPOINT__YPOS:
-                setYpos(YPOS_EDEFAULT);
-                return;
-        }
-        super.eUnset(featureID);
-    }
+		switch (featureID) {
+			case KGraphPackage.KPOINT__XPOS:
+				setXpos(XPOS_EDEFAULT);
+				return;
+			case KGraphPackage.KPOINT__YPOS:
+				setYpos(YPOS_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     @Override
     public boolean eIsSet(int featureID) {
-        switch (featureID) {
-            case KGraphPackage.KPOINT__XPOS:
-                return xpos != XPOS_EDEFAULT;
-            case KGraphPackage.KPOINT__YPOS:
-                return ypos != YPOS_EDEFAULT;
-        }
-        return super.eIsSet(featureID);
-    }
+		switch (featureID) {
+			case KGraphPackage.KPOINT__XPOS:
+				return xpos != XPOS_EDEFAULT;
+			case KGraphPackage.KPOINT__YPOS:
+				return ypos != YPOS_EDEFAULT;
+		}
+		return super.eIsSet(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (xpos: ");
-        result.append(xpos);
-        result.append(", ypos: ");
-        result.append(ypos);
-        result.append(')');
-        return result.toString();
-    }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (xpos: ");
+		result.append(xpos);
+		result.append(", ypos: ");
+		result.append(ypos);
+		result.append(')');
+		return result.toString();
+	}
 
 } //KPointImpl
