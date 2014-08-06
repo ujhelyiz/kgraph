@@ -9,6 +9,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.gef4.geometry.planar.Dimension;
+import org.eclipse.gef4.geometry.planar.Point;
 import org.eclipse.gef4.kgraph.KGraphPackage;
 import org.eclipse.gef4.kgraph.KLabel;
 import org.eclipse.gef4.kgraph.KLabeledGraphElement;
@@ -22,9 +24,7 @@ import org.eclipse.gef4.kgraph.KShapeLayout;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipse.gef4.kgraph.impl.KLabelImpl#getPosition <em>Position</em>}</li>
- *   <li>{@link org.eclipse.gef4.kgraph.impl.KLabelImpl#getYpos <em>Ypos</em>}</li>
- *   <li>{@link org.eclipse.gef4.kgraph.impl.KLabelImpl#getWidth <em>Width</em>}</li>
- *   <li>{@link org.eclipse.gef4.kgraph.impl.KLabelImpl#getHeight <em>Height</em>}</li>
+ *   <li>{@link org.eclipse.gef4.kgraph.impl.KLabelImpl#getSize <em>Size</em>}</li>
  *   <li>{@link org.eclipse.gef4.kgraph.impl.KLabelImpl#getText <em>Text</em>}</li>
  *   <li>{@link org.eclipse.gef4.kgraph.impl.KLabelImpl#getContainer <em>Container</em>}</li>
  * </ul>
@@ -41,7 +41,7 @@ public class KLabelImpl extends KGraphElementImpl implements KLabel {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double POSITION_EDEFAULT = 0.0;
+	protected static final Point POSITION_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getPosition() <em>Position</em>}' attribute.
@@ -51,69 +51,29 @@ public class KLabelImpl extends KGraphElementImpl implements KLabel {
 	 * @generated
 	 * @ordered
 	 */
-	protected double position = POSITION_EDEFAULT;
+	protected Point position = POSITION_EDEFAULT;
 
 				/**
-	 * The default value of the '{@link #getYpos() <em>Ypos</em>}' attribute.
+	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getYpos()
+	 * <!-- end-user-doc -->
+	 * @see #getSize()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final double YPOS_EDEFAULT = 0.0;
+	protected static final Dimension SIZE_EDEFAULT = null;
 
-    /**
-	 * The cached value of the '{@link #getYpos() <em>Ypos</em>}' attribute.
+	/**
+	 * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getYpos()
+	 * <!-- end-user-doc -->
+	 * @see #getSize()
 	 * @generated
 	 * @ordered
 	 */
-    protected double ypos = YPOS_EDEFAULT;
+	protected Dimension size = SIZE_EDEFAULT;
 
-    /**
-	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getWidth()
-	 * @generated
-	 * @ordered
-	 */
-    protected static final double WIDTH_EDEFAULT = 0.0;
-
-    /**
-	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getWidth()
-	 * @generated
-	 * @ordered
-	 */
-    protected double width = WIDTH_EDEFAULT;
-
-    /**
-	 * The default value of the '{@link #getHeight() <em>Height</em>}' attribute.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getHeight()
-	 * @generated
-	 * @ordered
-	 */
-    protected static final double HEIGHT_EDEFAULT = 0.0;
-
-    /**
-	 * The cached value of the '{@link #getHeight() <em>Height</em>}' attribute.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getHeight()
-	 * @generated
-	 * @ordered
-	 */
-    protected double height = HEIGHT_EDEFAULT;
-
-    /**
+				/**
 	 * The default value of the '{@link #getText() <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -157,7 +117,7 @@ public class KLabelImpl extends KGraphElementImpl implements KLabel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getPosition() {
+	public Point getPosition() {
 		return position;
 	}
 
@@ -166,8 +126,8 @@ public class KLabelImpl extends KGraphElementImpl implements KLabel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPosition(double newPosition) {
-		double oldPosition = position;
+	public void setPosition(Point newPosition) {
+		Point oldPosition = position;
 		position = newPosition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KLABEL__POSITION, oldPosition, position));
@@ -175,68 +135,26 @@ public class KLabelImpl extends KGraphElementImpl implements KLabel {
 
 				/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public double getYpos() {
-		return ypos;
+	public Dimension getSize() {
+		return size;
 	}
 
-    /**
+				/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setYpos(double newYpos) {
-		double oldYpos = ypos;
-		ypos = newYpos;
+	public void setSize(Dimension newSize) {
+		Dimension oldSize = size;
+		size = newSize;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KLABEL__YPOS, oldYpos, ypos));
+			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KLABEL__SIZE, oldSize, size));
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 */
-    public double getWidth() {
-		return width;
-	}
-
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 */
-    public void setWidth(double newWidth) {
-		double oldWidth = width;
-		width = newWidth;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KLABEL__WIDTH, oldWidth, width));
-	}
-
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 */
-    public double getHeight() {
-		return height;
-	}
-
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 */
-    public void setHeight(double newHeight) {
-		double oldHeight = height;
-		height = newHeight;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KLABEL__HEIGHT, oldHeight, height));
-	}
-
-    /**
+				/**
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated
@@ -352,12 +270,8 @@ public class KLabelImpl extends KGraphElementImpl implements KLabel {
 		switch (featureID) {
 			case KGraphPackage.KLABEL__POSITION:
 				return getPosition();
-			case KGraphPackage.KLABEL__YPOS:
-				return getYpos();
-			case KGraphPackage.KLABEL__WIDTH:
-				return getWidth();
-			case KGraphPackage.KLABEL__HEIGHT:
-				return getHeight();
+			case KGraphPackage.KLABEL__SIZE:
+				return getSize();
 			case KGraphPackage.KLABEL__TEXT:
 				return getText();
 			case KGraphPackage.KLABEL__CONTAINER:
@@ -375,16 +289,10 @@ public class KLabelImpl extends KGraphElementImpl implements KLabel {
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case KGraphPackage.KLABEL__POSITION:
-				setPosition((Double)newValue);
+				setPosition((Point)newValue);
 				return;
-			case KGraphPackage.KLABEL__YPOS:
-				setYpos((Double)newValue);
-				return;
-			case KGraphPackage.KLABEL__WIDTH:
-				setWidth((Double)newValue);
-				return;
-			case KGraphPackage.KLABEL__HEIGHT:
-				setHeight((Double)newValue);
+			case KGraphPackage.KLABEL__SIZE:
+				setSize((Dimension)newValue);
 				return;
 			case KGraphPackage.KLABEL__TEXT:
 				setText((String)newValue);
@@ -407,14 +315,8 @@ public class KLabelImpl extends KGraphElementImpl implements KLabel {
 			case KGraphPackage.KLABEL__POSITION:
 				setPosition(POSITION_EDEFAULT);
 				return;
-			case KGraphPackage.KLABEL__YPOS:
-				setYpos(YPOS_EDEFAULT);
-				return;
-			case KGraphPackage.KLABEL__WIDTH:
-				setWidth(WIDTH_EDEFAULT);
-				return;
-			case KGraphPackage.KLABEL__HEIGHT:
-				setHeight(HEIGHT_EDEFAULT);
+			case KGraphPackage.KLABEL__SIZE:
+				setSize(SIZE_EDEFAULT);
 				return;
 			case KGraphPackage.KLABEL__TEXT:
 				setText(TEXT_EDEFAULT);
@@ -435,13 +337,9 @@ public class KLabelImpl extends KGraphElementImpl implements KLabel {
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case KGraphPackage.KLABEL__POSITION:
-				return position != POSITION_EDEFAULT;
-			case KGraphPackage.KLABEL__YPOS:
-				return ypos != YPOS_EDEFAULT;
-			case KGraphPackage.KLABEL__WIDTH:
-				return width != WIDTH_EDEFAULT;
-			case KGraphPackage.KLABEL__HEIGHT:
-				return height != HEIGHT_EDEFAULT;
+				return POSITION_EDEFAULT == null ? position != null : !POSITION_EDEFAULT.equals(position);
+			case KGraphPackage.KLABEL__SIZE:
+				return SIZE_EDEFAULT == null ? size != null : !SIZE_EDEFAULT.equals(size);
 			case KGraphPackage.KLABEL__TEXT:
 				return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
 			case KGraphPackage.KLABEL__CONTAINER:
@@ -460,9 +358,7 @@ public class KLabelImpl extends KGraphElementImpl implements KLabel {
 		if (baseClass == KShapeLayout.class) {
 			switch (derivedFeatureID) {
 				case KGraphPackage.KLABEL__POSITION: return KGraphPackage.KSHAPE_LAYOUT__POSITION;
-				case KGraphPackage.KLABEL__YPOS: return KGraphPackage.KSHAPE_LAYOUT__YPOS;
-				case KGraphPackage.KLABEL__WIDTH: return KGraphPackage.KSHAPE_LAYOUT__WIDTH;
-				case KGraphPackage.KLABEL__HEIGHT: return KGraphPackage.KSHAPE_LAYOUT__HEIGHT;
+				case KGraphPackage.KLABEL__SIZE: return KGraphPackage.KSHAPE_LAYOUT__SIZE;
 				default: return -1;
 			}
 		}
@@ -479,9 +375,7 @@ public class KLabelImpl extends KGraphElementImpl implements KLabel {
 		if (baseClass == KShapeLayout.class) {
 			switch (baseFeatureID) {
 				case KGraphPackage.KSHAPE_LAYOUT__POSITION: return KGraphPackage.KLABEL__POSITION;
-				case KGraphPackage.KSHAPE_LAYOUT__YPOS: return KGraphPackage.KLABEL__YPOS;
-				case KGraphPackage.KSHAPE_LAYOUT__WIDTH: return KGraphPackage.KLABEL__WIDTH;
-				case KGraphPackage.KSHAPE_LAYOUT__HEIGHT: return KGraphPackage.KLABEL__HEIGHT;
+				case KGraphPackage.KSHAPE_LAYOUT__SIZE: return KGraphPackage.KLABEL__SIZE;
 				default: return -1;
 			}
 		}
@@ -500,12 +394,8 @@ public class KLabelImpl extends KGraphElementImpl implements KLabel {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (position: ");
 		result.append(position);
-		result.append(", ypos: ");
-		result.append(ypos);
-		result.append(", width: ");
-		result.append(width);
-		result.append(", height: ");
-		result.append(height);
+		result.append(", size: ");
+		result.append(size);
 		result.append(", text: ");
 		result.append(text);
 		result.append(')');

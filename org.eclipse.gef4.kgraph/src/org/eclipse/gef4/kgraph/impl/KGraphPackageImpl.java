@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.gef4.geometry.planar.Dimension;
 import org.eclipse.gef4.geometry.planar.Point;
 import org.eclipse.gef4.kgraph.KEdge;
 import org.eclipse.gef4.kgraph.KEdgeLayout;
@@ -116,6 +117,13 @@ public class KGraphPackageImpl extends EPackageImpl implements KGraphPackage {
 	 * @generated
 	 */
 	private EDataType pointEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType dimensionEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -426,26 +434,8 @@ public class KGraphPackageImpl extends EPackageImpl implements KGraphPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getKShapeLayout_Ypos() {
+	public EAttribute getKShapeLayout_Size() {
 		return (EAttribute)kShapeLayoutEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getKShapeLayout_Width() {
-		return (EAttribute)kShapeLayoutEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getKShapeLayout_Height() {
-		return (EAttribute)kShapeLayoutEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -561,6 +551,15 @@ public class KGraphPackageImpl extends EPackageImpl implements KGraphPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getDimension() {
+		return dimensionEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public KGraphFactory getKGraphFactory() {
 		return (KGraphFactory)getEFactoryInstance();
 	}
@@ -618,9 +617,7 @@ public class KGraphPackageImpl extends EPackageImpl implements KGraphPackage {
 
 		kShapeLayoutEClass = createEClass(KSHAPE_LAYOUT);
 		createEAttribute(kShapeLayoutEClass, KSHAPE_LAYOUT__POSITION);
-		createEAttribute(kShapeLayoutEClass, KSHAPE_LAYOUT__YPOS);
-		createEAttribute(kShapeLayoutEClass, KSHAPE_LAYOUT__WIDTH);
-		createEAttribute(kShapeLayoutEClass, KSHAPE_LAYOUT__HEIGHT);
+		createEAttribute(kShapeLayoutEClass, KSHAPE_LAYOUT__SIZE);
 
 		kEdgeLayoutEClass = createEClass(KEDGE_LAYOUT);
 		createEAttribute(kEdgeLayoutEClass, KEDGE_LAYOUT__START_POINT);
@@ -637,6 +634,7 @@ public class KGraphPackageImpl extends EPackageImpl implements KGraphPackage {
 		// Create data types
 		iPropertyEDataType = createEDataType(IPROPERTY);
 		pointEDataType = createEDataType(POINT);
+		dimensionEDataType = createEDataType(DIMENSION);
 	}
 
 	/**
@@ -724,10 +722,8 @@ public class KGraphPackageImpl extends EPackageImpl implements KGraphPackage {
 		initEReference(getKLabel_Container(), this.getKLabeledGraphElement(), this.getKLabeledGraphElement_Labels(), "container", null, 1, 1, KLabel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(kShapeLayoutEClass, KShapeLayout.class, "KShapeLayout", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getKShapeLayout_Position(), ecorePackage.getEDouble(), "position", null, 0, 1, KShapeLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getKShapeLayout_Ypos(), ecorePackage.getEDouble(), "ypos", null, 0, 1, KShapeLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getKShapeLayout_Width(), ecorePackage.getEDouble(), "width", null, 0, 1, KShapeLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getKShapeLayout_Height(), ecorePackage.getEDouble(), "height", null, 0, 1, KShapeLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getKShapeLayout_Position(), this.getPoint(), "position", null, 0, 1, KShapeLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getKShapeLayout_Size(), this.getDimension(), "size", null, 0, 1, KShapeLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(kEdgeLayoutEClass, KEdgeLayout.class, "KEdgeLayout", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getKEdgeLayout_StartPoint(), this.getPoint(), "startPoint", null, 0, 1, KEdgeLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -778,6 +774,7 @@ public class KGraphPackageImpl extends EPackageImpl implements KGraphPackage {
 		// Initialize data types
 		initEDataType(iPropertyEDataType, IProperty.class, "IProperty", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(pointEDataType, Point.class, "Point", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(dimensionEDataType, Dimension.class, "Dimension", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

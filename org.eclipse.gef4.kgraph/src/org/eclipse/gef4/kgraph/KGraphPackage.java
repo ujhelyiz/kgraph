@@ -460,40 +460,22 @@ public interface KGraphPackage extends EPackage {
 	int KNODE__POSITION = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 0;
 
 				/**
-	 * The feature id for the '<em><b>Ypos</b></em>' attribute.
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KNODE__YPOS = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 1;
+	int KNODE__SIZE = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 1;
 
-    /**
-	 * The feature id for the '<em><b>Width</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-    int KNODE__WIDTH = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 2;
-
-    /**
-	 * The feature id for the '<em><b>Height</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-    int KNODE__HEIGHT = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 3;
-
-    /**
+				/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KNODE__CHILDREN = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 4;
+    int KNODE__CHILDREN = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 2;
 
     /**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -502,7 +484,7 @@ public interface KGraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-    int KNODE__PARENT = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 5;
+    int KNODE__PARENT = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 3;
 
     /**
 	 * The feature id for the '<em><b>Ports</b></em>' containment reference list.
@@ -511,7 +493,7 @@ public interface KGraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-    int KNODE__PORTS = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 6;
+    int KNODE__PORTS = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 4;
 
     /**
 	 * The feature id for the '<em><b>Outgoing Edges</b></em>' containment reference list.
@@ -520,7 +502,7 @@ public interface KGraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-    int KNODE__OUTGOING_EDGES = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 7;
+    int KNODE__OUTGOING_EDGES = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 5;
 
     /**
 	 * The feature id for the '<em><b>Incoming Edges</b></em>' reference list.
@@ -529,7 +511,7 @@ public interface KGraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-    int KNODE__INCOMING_EDGES = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 8;
+    int KNODE__INCOMING_EDGES = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 6;
 
     /**
 	 * The number of structural features of the '<em>KNode</em>' class.
@@ -538,7 +520,7 @@ public interface KGraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-    int KNODE_FEATURE_COUNT = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 9;
+    int KNODE_FEATURE_COUNT = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 7;
 
     /**
 	 * The operation id for the '<em>Set Property</em>' operation.
@@ -822,40 +804,22 @@ public interface KGraphPackage extends EPackage {
 	int KPORT__POSITION = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 0;
 
 				/**
-	 * The feature id for the '<em><b>Ypos</b></em>' attribute.
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KPORT__YPOS = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 1;
+	int KPORT__SIZE = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 1;
 
-    /**
-	 * The feature id for the '<em><b>Width</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-    int KPORT__WIDTH = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 2;
-
-    /**
-	 * The feature id for the '<em><b>Height</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-    int KPORT__HEIGHT = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 3;
-
-    /**
+				/**
 	 * The feature id for the '<em><b>Container</b></em>' container reference.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KPORT__CONTAINER = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 4;
+    int KPORT__CONTAINER = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 2;
 
     /**
 	 * The feature id for the '<em><b>Outgoing Edges</b></em>' reference list.
@@ -864,7 +828,7 @@ public interface KGraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-    int KPORT__OUTGOING_EDGES = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 5;
+    int KPORT__OUTGOING_EDGES = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 3;
 
     /**
 	 * The feature id for the '<em><b>Incoming Edges</b></em>' reference list.
@@ -873,7 +837,7 @@ public interface KGraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-    int KPORT__INCOMING_EDGES = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 6;
+    int KPORT__INCOMING_EDGES = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 4;
 
     /**
 	 * The number of structural features of the '<em>KPort</em>' class.
@@ -882,7 +846,7 @@ public interface KGraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-    int KPORT_FEATURE_COUNT = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 7;
+    int KPORT_FEATURE_COUNT = KLABELED_GRAPH_ELEMENT_FEATURE_COUNT + 5;
 
     /**
 	 * The operation id for the '<em>Set Property</em>' operation.
@@ -985,40 +949,22 @@ public interface KGraphPackage extends EPackage {
 	int KLABEL__POSITION = KGRAPH_ELEMENT_FEATURE_COUNT + 0;
 
 				/**
-	 * The feature id for the '<em><b>Ypos</b></em>' attribute.
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KLABEL__YPOS = KGRAPH_ELEMENT_FEATURE_COUNT + 1;
+	int KLABEL__SIZE = KGRAPH_ELEMENT_FEATURE_COUNT + 1;
 
-    /**
-	 * The feature id for the '<em><b>Width</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-    int KLABEL__WIDTH = KGRAPH_ELEMENT_FEATURE_COUNT + 2;
-
-    /**
-	 * The feature id for the '<em><b>Height</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-    int KLABEL__HEIGHT = KGRAPH_ELEMENT_FEATURE_COUNT + 3;
-
-    /**
+				/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KLABEL__TEXT = KGRAPH_ELEMENT_FEATURE_COUNT + 4;
+    int KLABEL__TEXT = KGRAPH_ELEMENT_FEATURE_COUNT + 2;
 
     /**
 	 * The feature id for the '<em><b>Container</b></em>' container reference.
@@ -1027,7 +973,7 @@ public interface KGraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-    int KLABEL__CONTAINER = KGRAPH_ELEMENT_FEATURE_COUNT + 5;
+    int KLABEL__CONTAINER = KGRAPH_ELEMENT_FEATURE_COUNT + 3;
 
     /**
 	 * The number of structural features of the '<em>KLabel</em>' class.
@@ -1036,7 +982,7 @@ public interface KGraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-    int KLABEL_FEATURE_COUNT = KGRAPH_ELEMENT_FEATURE_COUNT + 6;
+    int KLABEL_FEATURE_COUNT = KGRAPH_ELEMENT_FEATURE_COUNT + 4;
 
     /**
 	 * The operation id for the '<em>Set Property</em>' operation.
@@ -1121,40 +1067,22 @@ public interface KGraphPackage extends EPackage {
 	int KSHAPE_LAYOUT__POSITION = 0;
 
 				/**
-	 * The feature id for the '<em><b>Ypos</b></em>' attribute.
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KSHAPE_LAYOUT__YPOS = 1;
+	int KSHAPE_LAYOUT__SIZE = 1;
 
-    /**
-	 * The feature id for the '<em><b>Width</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-    int KSHAPE_LAYOUT__WIDTH = 2;
-
-    /**
-	 * The feature id for the '<em><b>Height</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-    int KSHAPE_LAYOUT__HEIGHT = 3;
-
-    /**
+				/**
 	 * The number of structural features of the '<em>KShape Layout</em>' class.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int KSHAPE_LAYOUT_FEATURE_COUNT = 4;
+    int KSHAPE_LAYOUT_FEATURE_COUNT = 2;
 
     /**
 	 * The number of operations of the '<em>KShape Layout</em>' class.
@@ -1240,6 +1168,17 @@ public interface KGraphPackage extends EPackage {
 	 * @generated
 	 */
 	int POINT = 11;
+
+
+				/**
+	 * The meta object id for the '<em>Dimension</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gef4.geometry.planar.Dimension
+	 * @see org.eclipse.gef4.kgraph.impl.KGraphPackageImpl#getDimension()
+	 * @generated
+	 */
+	int DIMENSION = 12;
 
 
 				/**
@@ -1531,39 +1470,17 @@ public interface KGraphPackage extends EPackage {
 	EAttribute getKShapeLayout_Position();
 
 				/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gef4.kgraph.KShapeLayout#getYpos <em>Ypos</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.gef4.kgraph.KShapeLayout#getSize <em>Size</em>}'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Ypos</em>'.
-	 * @see org.eclipse.gef4.kgraph.KShapeLayout#getYpos()
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Size</em>'.
+	 * @see org.eclipse.gef4.kgraph.KShapeLayout#getSize()
 	 * @see #getKShapeLayout()
 	 * @generated
 	 */
-    EAttribute getKShapeLayout_Ypos();
+	EAttribute getKShapeLayout_Size();
 
-    /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gef4.kgraph.KShapeLayout#getWidth <em>Width</em>}'.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Width</em>'.
-	 * @see org.eclipse.gef4.kgraph.KShapeLayout#getWidth()
-	 * @see #getKShapeLayout()
-	 * @generated
-	 */
-    EAttribute getKShapeLayout_Width();
-
-    /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gef4.kgraph.KShapeLayout#getHeight <em>Height</em>}'.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Height</em>'.
-	 * @see org.eclipse.gef4.kgraph.KShapeLayout#getHeight()
-	 * @see #getKShapeLayout()
-	 * @generated
-	 */
-    EAttribute getKShapeLayout_Height();
-
-    /**
+				/**
 	 * Returns the meta object for class '{@link org.eclipse.gef4.kgraph.KEdgeLayout <em>KEdge Layout</em>}'.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1688,6 +1605,17 @@ public interface KGraphPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getPoint();
+
+				/**
+	 * Returns the meta object for data type '{@link org.eclipse.gef4.geometry.planar.Dimension <em>Dimension</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Dimension</em>'.
+	 * @see org.eclipse.gef4.geometry.planar.Dimension
+	 * @model instanceClass="org.eclipse.gef4.geometry.planar.Dimension"
+	 * @generated
+	 */
+	EDataType getDimension();
 
 				/**
 	 * Returns the factory that creates the instances of the model.
@@ -1945,30 +1873,14 @@ public interface KGraphPackage extends EPackage {
 		EAttribute KSHAPE_LAYOUT__POSITION = eINSTANCE.getKShapeLayout_Position();
 
 								/**
-		 * The meta object literal for the '<em><b>Ypos</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-        EAttribute KSHAPE_LAYOUT__YPOS = eINSTANCE.getKShapeLayout_Ypos();
+		EAttribute KSHAPE_LAYOUT__SIZE = eINSTANCE.getKShapeLayout_Size();
 
-        /**
-		 * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-		 * @generated
-		 */
-        EAttribute KSHAPE_LAYOUT__WIDTH = eINSTANCE.getKShapeLayout_Width();
-
-        /**
-		 * The meta object literal for the '<em><b>Height</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-		 * @generated
-		 */
-        EAttribute KSHAPE_LAYOUT__HEIGHT = eINSTANCE.getKShapeLayout_Height();
-
-        /**
+								/**
 		 * The meta object literal for the '{@link org.eclipse.gef4.kgraph.KEdgeLayout <em>KEdge Layout</em>}' class.
 		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -2071,6 +1983,16 @@ public interface KGraphPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType POINT = eINSTANCE.getPoint();
+
+								/**
+		 * The meta object literal for the '<em>Dimension</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gef4.geometry.planar.Dimension
+		 * @see org.eclipse.gef4.kgraph.impl.KGraphPackageImpl#getDimension()
+		 * @generated
+		 */
+		EDataType DIMENSION = eINSTANCE.getDimension();
 
     }
 

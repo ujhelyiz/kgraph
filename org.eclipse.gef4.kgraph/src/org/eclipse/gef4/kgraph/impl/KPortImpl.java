@@ -14,6 +14,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.gef4.geometry.planar.Dimension;
+import org.eclipse.gef4.geometry.planar.Point;
 import org.eclipse.gef4.kgraph.KEdge;
 import org.eclipse.gef4.kgraph.KGraphPackage;
 import org.eclipse.gef4.kgraph.KNode;
@@ -28,9 +30,7 @@ import org.eclipse.gef4.kgraph.KShapeLayout;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipse.gef4.kgraph.impl.KPortImpl#getPosition <em>Position</em>}</li>
- *   <li>{@link org.eclipse.gef4.kgraph.impl.KPortImpl#getYpos <em>Ypos</em>}</li>
- *   <li>{@link org.eclipse.gef4.kgraph.impl.KPortImpl#getWidth <em>Width</em>}</li>
- *   <li>{@link org.eclipse.gef4.kgraph.impl.KPortImpl#getHeight <em>Height</em>}</li>
+ *   <li>{@link org.eclipse.gef4.kgraph.impl.KPortImpl#getSize <em>Size</em>}</li>
  *   <li>{@link org.eclipse.gef4.kgraph.impl.KPortImpl#getContainer <em>Container</em>}</li>
  *   <li>{@link org.eclipse.gef4.kgraph.impl.KPortImpl#getOutgoingEdges <em>Outgoing Edges</em>}</li>
  *   <li>{@link org.eclipse.gef4.kgraph.impl.KPortImpl#getIncomingEdges <em>Incoming Edges</em>}</li>
@@ -48,7 +48,7 @@ public class KPortImpl extends KLabeledGraphElementImpl implements KPort {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double POSITION_EDEFAULT = 0.0;
+	protected static final Point POSITION_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getPosition() <em>Position</em>}' attribute.
@@ -58,69 +58,29 @@ public class KPortImpl extends KLabeledGraphElementImpl implements KPort {
 	 * @generated
 	 * @ordered
 	 */
-	protected double position = POSITION_EDEFAULT;
+	protected Point position = POSITION_EDEFAULT;
 
 				/**
-	 * The default value of the '{@link #getYpos() <em>Ypos</em>}' attribute.
+	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getYpos()
+	 * <!-- end-user-doc -->
+	 * @see #getSize()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final double YPOS_EDEFAULT = 0.0;
+	protected static final Dimension SIZE_EDEFAULT = null;
 
-    /**
-	 * The cached value of the '{@link #getYpos() <em>Ypos</em>}' attribute.
+	/**
+	 * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getYpos()
+	 * <!-- end-user-doc -->
+	 * @see #getSize()
 	 * @generated
 	 * @ordered
 	 */
-    protected double ypos = YPOS_EDEFAULT;
+	protected Dimension size = SIZE_EDEFAULT;
 
-    /**
-	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getWidth()
-	 * @generated
-	 * @ordered
-	 */
-    protected static final double WIDTH_EDEFAULT = 0.0;
-
-    /**
-	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getWidth()
-	 * @generated
-	 * @ordered
-	 */
-    protected double width = WIDTH_EDEFAULT;
-
-    /**
-	 * The default value of the '{@link #getHeight() <em>Height</em>}' attribute.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getHeight()
-	 * @generated
-	 * @ordered
-	 */
-    protected static final double HEIGHT_EDEFAULT = 0.0;
-
-    /**
-	 * The cached value of the '{@link #getHeight() <em>Height</em>}' attribute.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getHeight()
-	 * @generated
-	 * @ordered
-	 */
-    protected double height = HEIGHT_EDEFAULT;
-
-    /**
+				/**
 	 * The cached value of the '{@link #getOutgoingEdges() <em>Outgoing Edges</em>}' reference list.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -164,7 +124,7 @@ public class KPortImpl extends KLabeledGraphElementImpl implements KPort {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getPosition() {
+	public Point getPosition() {
 		return position;
 	}
 
@@ -173,8 +133,8 @@ public class KPortImpl extends KLabeledGraphElementImpl implements KPort {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPosition(double newPosition) {
-		double oldPosition = position;
+	public void setPosition(Point newPosition) {
+		Point oldPosition = position;
 		position = newPosition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KPORT__POSITION, oldPosition, position));
@@ -182,68 +142,26 @@ public class KPortImpl extends KLabeledGraphElementImpl implements KPort {
 
 				/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public double getYpos() {
-		return ypos;
+	public Dimension getSize() {
+		return size;
 	}
 
-    /**
+				/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setYpos(double newYpos) {
-		double oldYpos = ypos;
-		ypos = newYpos;
+	public void setSize(Dimension newSize) {
+		Dimension oldSize = size;
+		size = newSize;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KPORT__YPOS, oldYpos, ypos));
+			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KPORT__SIZE, oldSize, size));
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 */
-    public double getWidth() {
-		return width;
-	}
-
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 */
-    public void setWidth(double newWidth) {
-		double oldWidth = width;
-		width = newWidth;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KPORT__WIDTH, oldWidth, width));
-	}
-
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 */
-    public double getHeight() {
-		return height;
-	}
-
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 */
-    public void setHeight(double newHeight) {
-		double oldHeight = height;
-		height = newHeight;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KPORT__HEIGHT, oldHeight, height));
-	}
-
-    /**
+				/**
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated
@@ -371,12 +289,8 @@ public class KPortImpl extends KLabeledGraphElementImpl implements KPort {
 		switch (featureID) {
 			case KGraphPackage.KPORT__POSITION:
 				return getPosition();
-			case KGraphPackage.KPORT__YPOS:
-				return getYpos();
-			case KGraphPackage.KPORT__WIDTH:
-				return getWidth();
-			case KGraphPackage.KPORT__HEIGHT:
-				return getHeight();
+			case KGraphPackage.KPORT__SIZE:
+				return getSize();
 			case KGraphPackage.KPORT__CONTAINER:
 				return getContainer();
 			case KGraphPackage.KPORT__OUTGOING_EDGES:
@@ -397,16 +311,10 @@ public class KPortImpl extends KLabeledGraphElementImpl implements KPort {
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case KGraphPackage.KPORT__POSITION:
-				setPosition((Double)newValue);
+				setPosition((Point)newValue);
 				return;
-			case KGraphPackage.KPORT__YPOS:
-				setYpos((Double)newValue);
-				return;
-			case KGraphPackage.KPORT__WIDTH:
-				setWidth((Double)newValue);
-				return;
-			case KGraphPackage.KPORT__HEIGHT:
-				setHeight((Double)newValue);
+			case KGraphPackage.KPORT__SIZE:
+				setSize((Dimension)newValue);
 				return;
 			case KGraphPackage.KPORT__CONTAINER:
 				setContainer((KNode)newValue);
@@ -434,14 +342,8 @@ public class KPortImpl extends KLabeledGraphElementImpl implements KPort {
 			case KGraphPackage.KPORT__POSITION:
 				setPosition(POSITION_EDEFAULT);
 				return;
-			case KGraphPackage.KPORT__YPOS:
-				setYpos(YPOS_EDEFAULT);
-				return;
-			case KGraphPackage.KPORT__WIDTH:
-				setWidth(WIDTH_EDEFAULT);
-				return;
-			case KGraphPackage.KPORT__HEIGHT:
-				setHeight(HEIGHT_EDEFAULT);
+			case KGraphPackage.KPORT__SIZE:
+				setSize(SIZE_EDEFAULT);
 				return;
 			case KGraphPackage.KPORT__CONTAINER:
 				setContainer((KNode)null);
@@ -465,13 +367,9 @@ public class KPortImpl extends KLabeledGraphElementImpl implements KPort {
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case KGraphPackage.KPORT__POSITION:
-				return position != POSITION_EDEFAULT;
-			case KGraphPackage.KPORT__YPOS:
-				return ypos != YPOS_EDEFAULT;
-			case KGraphPackage.KPORT__WIDTH:
-				return width != WIDTH_EDEFAULT;
-			case KGraphPackage.KPORT__HEIGHT:
-				return height != HEIGHT_EDEFAULT;
+				return POSITION_EDEFAULT == null ? position != null : !POSITION_EDEFAULT.equals(position);
+			case KGraphPackage.KPORT__SIZE:
+				return SIZE_EDEFAULT == null ? size != null : !SIZE_EDEFAULT.equals(size);
 			case KGraphPackage.KPORT__CONTAINER:
 				return getContainer() != null;
 			case KGraphPackage.KPORT__OUTGOING_EDGES:
@@ -492,9 +390,7 @@ public class KPortImpl extends KLabeledGraphElementImpl implements KPort {
 		if (baseClass == KShapeLayout.class) {
 			switch (derivedFeatureID) {
 				case KGraphPackage.KPORT__POSITION: return KGraphPackage.KSHAPE_LAYOUT__POSITION;
-				case KGraphPackage.KPORT__YPOS: return KGraphPackage.KSHAPE_LAYOUT__YPOS;
-				case KGraphPackage.KPORT__WIDTH: return KGraphPackage.KSHAPE_LAYOUT__WIDTH;
-				case KGraphPackage.KPORT__HEIGHT: return KGraphPackage.KSHAPE_LAYOUT__HEIGHT;
+				case KGraphPackage.KPORT__SIZE: return KGraphPackage.KSHAPE_LAYOUT__SIZE;
 				default: return -1;
 			}
 		}
@@ -511,9 +407,7 @@ public class KPortImpl extends KLabeledGraphElementImpl implements KPort {
 		if (baseClass == KShapeLayout.class) {
 			switch (baseFeatureID) {
 				case KGraphPackage.KSHAPE_LAYOUT__POSITION: return KGraphPackage.KPORT__POSITION;
-				case KGraphPackage.KSHAPE_LAYOUT__YPOS: return KGraphPackage.KPORT__YPOS;
-				case KGraphPackage.KSHAPE_LAYOUT__WIDTH: return KGraphPackage.KPORT__WIDTH;
-				case KGraphPackage.KSHAPE_LAYOUT__HEIGHT: return KGraphPackage.KPORT__HEIGHT;
+				case KGraphPackage.KSHAPE_LAYOUT__SIZE: return KGraphPackage.KPORT__SIZE;
 				default: return -1;
 			}
 		}
@@ -532,12 +426,8 @@ public class KPortImpl extends KLabeledGraphElementImpl implements KPort {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (position: ");
 		result.append(position);
-		result.append(", ypos: ");
-		result.append(ypos);
-		result.append(", width: ");
-		result.append(width);
-		result.append(", height: ");
-		result.append(height);
+		result.append(", size: ");
+		result.append(size);
 		result.append(')');
 		return result.toString();
 	}

@@ -4,6 +4,7 @@ package org.eclipse.gef4.kgraph.impl;
 
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -15,6 +16,8 @@ import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.gef4.geometry.planar.Dimension;
+import org.eclipse.gef4.geometry.planar.Point;
 import org.eclipse.gef4.kgraph.KEdge;
 import org.eclipse.gef4.kgraph.KGraphPackage;
 import org.eclipse.gef4.kgraph.KNode;
@@ -29,9 +32,7 @@ import org.eclipse.gef4.kgraph.KShapeLayout;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipse.gef4.kgraph.impl.KNodeImpl#getPosition <em>Position</em>}</li>
- *   <li>{@link org.eclipse.gef4.kgraph.impl.KNodeImpl#getYpos <em>Ypos</em>}</li>
- *   <li>{@link org.eclipse.gef4.kgraph.impl.KNodeImpl#getWidth <em>Width</em>}</li>
- *   <li>{@link org.eclipse.gef4.kgraph.impl.KNodeImpl#getHeight <em>Height</em>}</li>
+ *   <li>{@link org.eclipse.gef4.kgraph.impl.KNodeImpl#getSize <em>Size</em>}</li>
  *   <li>{@link org.eclipse.gef4.kgraph.impl.KNodeImpl#getChildren <em>Children</em>}</li>
  *   <li>{@link org.eclipse.gef4.kgraph.impl.KNodeImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link org.eclipse.gef4.kgraph.impl.KNodeImpl#getPorts <em>Ports</em>}</li>
@@ -51,7 +52,7 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double POSITION_EDEFAULT = 0.0;
+	protected static final Point POSITION_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getPosition() <em>Position</em>}' attribute.
@@ -61,69 +62,29 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
 	 * @generated
 	 * @ordered
 	 */
-	protected double position = POSITION_EDEFAULT;
+	protected Point position = POSITION_EDEFAULT;
 
 				/**
-	 * The default value of the '{@link #getYpos() <em>Ypos</em>}' attribute.
+	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getYpos()
+	 * <!-- end-user-doc -->
+	 * @see #getSize()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final double YPOS_EDEFAULT = 0.0;
+	protected static final Dimension SIZE_EDEFAULT = null;
 
-    /**
-	 * The cached value of the '{@link #getYpos() <em>Ypos</em>}' attribute.
+	/**
+	 * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getYpos()
+	 * <!-- end-user-doc -->
+	 * @see #getSize()
 	 * @generated
 	 * @ordered
 	 */
-    protected double ypos = YPOS_EDEFAULT;
+	protected Dimension size = SIZE_EDEFAULT;
 
-    /**
-	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getWidth()
-	 * @generated
-	 * @ordered
-	 */
-    protected static final double WIDTH_EDEFAULT = 0.0;
-
-    /**
-	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getWidth()
-	 * @generated
-	 * @ordered
-	 */
-    protected double width = WIDTH_EDEFAULT;
-
-    /**
-	 * The default value of the '{@link #getHeight() <em>Height</em>}' attribute.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getHeight()
-	 * @generated
-	 * @ordered
-	 */
-    protected static final double HEIGHT_EDEFAULT = 0.0;
-
-    /**
-	 * The cached value of the '{@link #getHeight() <em>Height</em>}' attribute.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @see #getHeight()
-	 * @generated
-	 * @ordered
-	 */
-    protected double height = HEIGHT_EDEFAULT;
-
-    /**
+				/**
 	 * The cached value of the '{@link #getChildren() <em>Children</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -187,7 +148,7 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getPosition() {
+	public Point getPosition() {
 		return position;
 	}
 
@@ -196,8 +157,8 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPosition(double newPosition) {
-		double oldPosition = position;
+	public void setPosition(Point newPosition) {
+		Point oldPosition = position;
 		position = newPosition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KNODE__POSITION, oldPosition, position));
@@ -205,68 +166,26 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
 
 				/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public double getYpos() {
-		return ypos;
+	public Dimension getSize() {
+		return size;
 	}
 
-    /**
+				/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setYpos(double newYpos) {
-		double oldYpos = ypos;
-		ypos = newYpos;
+	public void setSize(Dimension newSize) {
+		Dimension oldSize = size;
+		size = newSize;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KNODE__YPOS, oldYpos, ypos));
+			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KNODE__SIZE, oldSize, size));
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 */
-    public double getWidth() {
-		return width;
-	}
-
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 */
-    public void setWidth(double newWidth) {
-		double oldWidth = width;
-		width = newWidth;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KNODE__WIDTH, oldWidth, width));
-	}
-
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 */
-    public double getHeight() {
-		return height;
-	}
-
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 */
-    public void setHeight(double newHeight) {
-		double oldHeight = height;
-		height = newHeight;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KGraphPackage.KNODE__HEIGHT, oldHeight, height));
-	}
-
-    /**
+				/**
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated
@@ -426,12 +345,8 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
 		switch (featureID) {
 			case KGraphPackage.KNODE__POSITION:
 				return getPosition();
-			case KGraphPackage.KNODE__YPOS:
-				return getYpos();
-			case KGraphPackage.KNODE__WIDTH:
-				return getWidth();
-			case KGraphPackage.KNODE__HEIGHT:
-				return getHeight();
+			case KGraphPackage.KNODE__SIZE:
+				return getSize();
 			case KGraphPackage.KNODE__CHILDREN:
 				return getChildren();
 			case KGraphPackage.KNODE__PARENT:
@@ -456,16 +371,10 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case KGraphPackage.KNODE__POSITION:
-				setPosition((Double)newValue);
+				setPosition((Point)newValue);
 				return;
-			case KGraphPackage.KNODE__YPOS:
-				setYpos((Double)newValue);
-				return;
-			case KGraphPackage.KNODE__WIDTH:
-				setWidth((Double)newValue);
-				return;
-			case KGraphPackage.KNODE__HEIGHT:
-				setHeight((Double)newValue);
+			case KGraphPackage.KNODE__SIZE:
+				setSize((Dimension)newValue);
 				return;
 			case KGraphPackage.KNODE__CHILDREN:
 				getChildren().clear();
@@ -501,14 +410,8 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
 			case KGraphPackage.KNODE__POSITION:
 				setPosition(POSITION_EDEFAULT);
 				return;
-			case KGraphPackage.KNODE__YPOS:
-				setYpos(YPOS_EDEFAULT);
-				return;
-			case KGraphPackage.KNODE__WIDTH:
-				setWidth(WIDTH_EDEFAULT);
-				return;
-			case KGraphPackage.KNODE__HEIGHT:
-				setHeight(HEIGHT_EDEFAULT);
+			case KGraphPackage.KNODE__SIZE:
+				setSize(SIZE_EDEFAULT);
 				return;
 			case KGraphPackage.KNODE__CHILDREN:
 				getChildren().clear();
@@ -538,13 +441,9 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case KGraphPackage.KNODE__POSITION:
-				return position != POSITION_EDEFAULT;
-			case KGraphPackage.KNODE__YPOS:
-				return ypos != YPOS_EDEFAULT;
-			case KGraphPackage.KNODE__WIDTH:
-				return width != WIDTH_EDEFAULT;
-			case KGraphPackage.KNODE__HEIGHT:
-				return height != HEIGHT_EDEFAULT;
+				return POSITION_EDEFAULT == null ? position != null : !POSITION_EDEFAULT.equals(position);
+			case KGraphPackage.KNODE__SIZE:
+				return SIZE_EDEFAULT == null ? size != null : !SIZE_EDEFAULT.equals(size);
 			case KGraphPackage.KNODE__CHILDREN:
 				return children != null && !children.isEmpty();
 			case KGraphPackage.KNODE__PARENT:
@@ -569,9 +468,7 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
 		if (baseClass == KShapeLayout.class) {
 			switch (derivedFeatureID) {
 				case KGraphPackage.KNODE__POSITION: return KGraphPackage.KSHAPE_LAYOUT__POSITION;
-				case KGraphPackage.KNODE__YPOS: return KGraphPackage.KSHAPE_LAYOUT__YPOS;
-				case KGraphPackage.KNODE__WIDTH: return KGraphPackage.KSHAPE_LAYOUT__WIDTH;
-				case KGraphPackage.KNODE__HEIGHT: return KGraphPackage.KSHAPE_LAYOUT__HEIGHT;
+				case KGraphPackage.KNODE__SIZE: return KGraphPackage.KSHAPE_LAYOUT__SIZE;
 				default: return -1;
 			}
 		}
@@ -588,9 +485,7 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
 		if (baseClass == KShapeLayout.class) {
 			switch (baseFeatureID) {
 				case KGraphPackage.KSHAPE_LAYOUT__POSITION: return KGraphPackage.KNODE__POSITION;
-				case KGraphPackage.KSHAPE_LAYOUT__YPOS: return KGraphPackage.KNODE__YPOS;
-				case KGraphPackage.KSHAPE_LAYOUT__WIDTH: return KGraphPackage.KNODE__WIDTH;
-				case KGraphPackage.KSHAPE_LAYOUT__HEIGHT: return KGraphPackage.KNODE__HEIGHT;
+				case KGraphPackage.KSHAPE_LAYOUT__SIZE: return KGraphPackage.KNODE__SIZE;
 				default: return -1;
 			}
 		}
@@ -609,12 +504,8 @@ public class KNodeImpl extends KLabeledGraphElementImpl implements KNode {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (position: ");
 		result.append(position);
-		result.append(", ypos: ");
-		result.append(ypos);
-		result.append(", width: ");
-		result.append(width);
-		result.append(", height: ");
-		result.append(height);
+		result.append(", size: ");
+		result.append(size);
 		result.append(')');
 		return result.toString();
 	}
