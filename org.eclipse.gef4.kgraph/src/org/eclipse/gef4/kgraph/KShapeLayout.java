@@ -2,6 +2,9 @@
  */
 package org.eclipse.gef4.kgraph;
 
+import org.eclipse.gef4.geometry.planar.Dimension;
+import org.eclipse.gef4.geometry.planar.Point;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -23,10 +26,8 @@ package org.eclipse.gef4.kgraph;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gef4.kgraph.KShapeLayout#getXpos <em>Xpos</em>}</li>
- *   <li>{@link org.eclipse.gef4.kgraph.KShapeLayout#getYpos <em>Ypos</em>}</li>
- *   <li>{@link org.eclipse.gef4.kgraph.KShapeLayout#getWidth <em>Width</em>}</li>
- *   <li>{@link org.eclipse.gef4.kgraph.KShapeLayout#getHeight <em>Height</em>}</li>
+ *   <li>{@link org.eclipse.gef4.kgraph.KShapeLayout#getPosition <em>Position</em>}</li>
+ *   <li>{@link org.eclipse.gef4.kgraph.KShapeLayout#getSize <em>Size</em>}</li>
  * </ul>
  * </p>
  *
@@ -36,107 +37,55 @@ package org.eclipse.gef4.kgraph;
  */
 public interface KShapeLayout {
     /**
-     * Returns the value of the '<em><b>Xpos</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Xpos</em>' attribute isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Xpos</em>' attribute.
-     * @see #setXpos(double)
-     * @see org.eclipse.gef4.kgraph.KGraphPackage#getKShapeLayout_Xpos()
-     * @model
-     * @generated
-     */
-    double getXpos();
+	 * Returns the value of the '<em><b>Position</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Position</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Position</em>' attribute.
+	 * @see #setPosition(Point)
+	 * @see org.eclipse.gef4.kgraph.KGraphPackage#getKShapeLayout_Position()
+	 * @model dataType="org.eclipse.gef4.kgraph.Point"
+	 * @generated
+	 */
+	Point getPosition();
 
-    /**
-     * Sets the value of the '{@link org.eclipse.gef4.kgraph.KShapeLayout#getXpos <em>Xpos</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Xpos</em>' attribute.
-     * @see #getXpos()
-     * @generated
-     */
-    void setXpos(double value);
+	/**
+	 * Sets the value of the '{@link org.eclipse.gef4.kgraph.KShapeLayout#getPosition <em>Position</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Position</em>' attribute.
+	 * @see #getPosition()
+	 * @generated
+	 */
+	void setPosition(Point value);
 
-    /**
-     * Returns the value of the '<em><b>Ypos</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Ypos</em>' attribute isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Ypos</em>' attribute.
-     * @see #setYpos(double)
-     * @see org.eclipse.gef4.kgraph.KGraphPackage#getKShapeLayout_Ypos()
-     * @model
-     * @generated
-     */
-    double getYpos();
+				/**
+	 * Returns the value of the '<em><b>Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Size</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Size</em>' attribute.
+	 * @see #setSize(Dimension)
+	 * @see org.eclipse.gef4.kgraph.KGraphPackage#getKShapeLayout_Size()
+	 * @model dataType="org.eclipse.gef4.kgraph.Dimension"
+	 * @generated
+	 */
+	Dimension getSize();
 
-    /**
-     * Sets the value of the '{@link org.eclipse.gef4.kgraph.KShapeLayout#getYpos <em>Ypos</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Ypos</em>' attribute.
-     * @see #getYpos()
-     * @generated
-     */
-    void setYpos(double value);
-
-    /**
-     * Returns the value of the '<em><b>Width</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Width</em>' attribute isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Width</em>' attribute.
-     * @see #setWidth(double)
-     * @see org.eclipse.gef4.kgraph.KGraphPackage#getKShapeLayout_Width()
-     * @model
-     * @generated
-     */
-    double getWidth();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.gef4.kgraph.KShapeLayout#getWidth <em>Width</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Width</em>' attribute.
-     * @see #getWidth()
-     * @generated
-     */
-    void setWidth(double value);
-
-    /**
-     * Returns the value of the '<em><b>Height</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Height</em>' attribute isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Height</em>' attribute.
-     * @see #setHeight(double)
-     * @see org.eclipse.gef4.kgraph.KGraphPackage#getKShapeLayout_Height()
-     * @model
-     * @generated
-     */
-    double getHeight();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.gef4.kgraph.KShapeLayout#getHeight <em>Height</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Height</em>' attribute.
-     * @see #getHeight()
-     * @generated
-     */
-    void setHeight(double value);
+				/**
+	 * Sets the value of the '{@link org.eclipse.gef4.kgraph.KShapeLayout#getSize <em>Size</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Size</em>' attribute.
+	 * @see #getSize()
+	 * @generated
+	 */
+	void setSize(Dimension value);
 
 } // KShapeLayout

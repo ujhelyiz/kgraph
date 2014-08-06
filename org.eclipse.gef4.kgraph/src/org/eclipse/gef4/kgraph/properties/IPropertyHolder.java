@@ -55,5 +55,10 @@ public interface IPropertyHolder {
      * @return a map of all properties
      */
     Map<IProperty<?>, Object> getAllProperties();
+    
+    
+    // (id, value.toString)
+    Map<String, String> getSerializedProperties();
+    
 
 }

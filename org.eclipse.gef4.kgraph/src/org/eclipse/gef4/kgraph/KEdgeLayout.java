@@ -3,6 +3,7 @@
 package org.eclipse.gef4.kgraph;
 
 import java.util.List;
+import org.eclipse.gef4.geometry.planar.Point;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,9 +25,9 @@ import java.util.List;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gef4.kgraph.KEdgeLayout#getSourcePoint <em>Source Point</em>}</li>
- *   <li>{@link org.eclipse.gef4.kgraph.KEdgeLayout#getTargetPoint <em>Target Point</em>}</li>
- *   <li>{@link org.eclipse.gef4.kgraph.KEdgeLayout#getBendPoints <em>Bend Points</em>}</li>
+ *   <li>{@link org.eclipse.gef4.kgraph.KEdgeLayout#getStartPoint <em>Start Point</em>}</li>
+ *   <li>{@link org.eclipse.gef4.kgraph.KEdgeLayout#getEndPoint <em>End Point</em>}</li>
+ *   <li>{@link org.eclipse.gef4.kgraph.KEdgeLayout#getWayPoints <em>Way Points</em>}</li>
  * </ul>
  * </p>
  *
@@ -36,73 +37,71 @@ import java.util.List;
  */
 public interface KEdgeLayout {
     /**
-     * Returns the value of the '<em><b>Source Point</b></em>' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * <!-- begin-model-doc -->
-     * The source point is the point at which the edge touches the source node
-     * or source port. The coordinates of source points must obey the general
-     * rules for edge coordinates defined above.
-     * <!-- end-model-doc -->
-     * @return the value of the '<em>Source Point</em>' containment reference.
-     * @see #setSourcePoint(KPoint)
-     * @see org.eclipse.gef4.kgraph.KGraphPackage#getKEdgeLayout_SourcePoint()
-     * @model containment="true"
-     * @generated
-     */
-    KPoint getSourcePoint();
+	 * Returns the value of the '<em><b>Start Point</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Start Point</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Start Point</em>' attribute.
+	 * @see #setStartPoint(Point)
+	 * @see org.eclipse.gef4.kgraph.KGraphPackage#getKEdgeLayout_StartPoint()
+	 * @model dataType="org.eclipse.gef4.kgraph.Point"
+	 * @generated
+	 */
+	Point getStartPoint();
 
-    /**
-     * Sets the value of the '{@link org.eclipse.gef4.kgraph.KEdgeLayout#getSourcePoint <em>Source Point</em>}' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Source Point</em>' containment reference.
-     * @see #getSourcePoint()
-     * @generated
-     */
-    void setSourcePoint(KPoint value);
+	/**
+	 * Sets the value of the '{@link org.eclipse.gef4.kgraph.KEdgeLayout#getStartPoint <em>Start Point</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Start Point</em>' attribute.
+	 * @see #getStartPoint()
+	 * @generated
+	 */
+	void setStartPoint(Point value);
 
-    /**
-     * Returns the value of the '<em><b>Target Point</b></em>' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * <!-- begin-model-doc -->
-     * The target point is the point at which the edge touches the target node
-     * or target port. The coordinates of target points must obey the general
-     * rules for edge coordinates defined above.
-     * <!-- end-model-doc -->
-     * @return the value of the '<em>Target Point</em>' containment reference.
-     * @see #setTargetPoint(KPoint)
-     * @see org.eclipse.gef4.kgraph.KGraphPackage#getKEdgeLayout_TargetPoint()
-     * @model containment="true"
-     * @generated
-     */
-    KPoint getTargetPoint();
+	/**
+	 * Returns the value of the '<em><b>End Point</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>End Point</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>End Point</em>' attribute.
+	 * @see #setEndPoint(Point)
+	 * @see org.eclipse.gef4.kgraph.KGraphPackage#getKEdgeLayout_EndPoint()
+	 * @model dataType="org.eclipse.gef4.kgraph.Point"
+	 * @generated
+	 */
+	Point getEndPoint();
 
-    /**
-     * Sets the value of the '{@link org.eclipse.gef4.kgraph.KEdgeLayout#getTargetPoint <em>Target Point</em>}' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Target Point</em>' containment reference.
-     * @see #getTargetPoint()
-     * @generated
-     */
-    void setTargetPoint(KPoint value);
+	/**
+	 * Sets the value of the '{@link org.eclipse.gef4.kgraph.KEdgeLayout#getEndPoint <em>End Point</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>End Point</em>' attribute.
+	 * @see #getEndPoint()
+	 * @generated
+	 */
+	void setEndPoint(Point value);
 
-    /**
-     * Returns the value of the '<em><b>Bend Points</b></em>' containment reference list.
-     * The list contents are of type {@link org.eclipse.gef4.kgraph.KPoint}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * <!-- begin-model-doc -->
-     * The coordinates of bend points must obey the general rules for edge
-     * coordinates defined above.
-     * <!-- end-model-doc -->
-     * @return the value of the '<em>Bend Points</em>' containment reference list.
-     * @see org.eclipse.gef4.kgraph.KGraphPackage#getKEdgeLayout_BendPoints()
-     * @model containment="true"
-     * @generated
-     */
-    List<KPoint> getBendPoints();
+	/**
+	 * Returns the value of the '<em><b>Way Points</b></em>' attribute list.
+	 * The list contents are of type {@link org.eclipse.gef4.geometry.planar.Point}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Way Points</em>' attribute list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Way Points</em>' attribute list.
+	 * @see org.eclipse.gef4.kgraph.KGraphPackage#getKEdgeLayout_WayPoints()
+	 * @model dataType="org.eclipse.gef4.kgraph.Point"
+	 * @generated
+	 */
+	List<Point> getWayPoints();
 
 } // KEdgeLayout

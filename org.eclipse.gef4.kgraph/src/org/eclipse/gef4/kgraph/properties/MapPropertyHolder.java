@@ -17,6 +17,7 @@ import java.io.Serializable;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 /**
  * An abstract holder class for properties that uses a hash map.
@@ -125,6 +126,15 @@ public class MapPropertyHolder implements IPropertyHolder, Serializable {
                 }
             }
         }
+    }
+    
+    // TODO: would be nicer to delegate toString to the property -> could be changed
+    public Map<String, String> getSerializedProperties() {
+    	Map<String, String> serializedProperties = new HashMap<String, String>();
+    	for(Entry<IProperty<?>, Object> entry : getAllProperties().entrySet()){
+    		serializedProperties.put(entry.getKey().getId(), entry.getValue().toString());
+    	}
+    	return serializedProperties;
     }
     
 }

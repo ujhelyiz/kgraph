@@ -11,5 +11,6 @@ Export-Package: org.eclipse.gef4.kgraph,
  org.eclipse.gef4.kgraph.impl,
  org.eclipse.gef4.kgraph.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;bundle-version="2.9.0";visibility:=reexport
+ org.eclipse.emf.ecore;bundle-version="2.9.0";visibility:=reexport,
+ org.eclipse.gef4.geometry;bundle-version="0.1.0"
 Bundle-ActivationPolicy: lazy
